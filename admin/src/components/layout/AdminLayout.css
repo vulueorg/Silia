@@ -366,7 +366,7 @@
   }
 
   .admin-sidebar--mobile-open {
-    transform: translateX(0);
+    transform: translateX(0) !important;
   }
 
   /* Topbar spans full width on mobile */

@@ -135,6 +135,7 @@ const pageTitles = {
 export default function AdminLayout() {
   const [collapsed, setCollapsed] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768)
   const location = useLocation()
 
   const pageTitle = pageTitles[location.pathname] || 'Admin'
@@ -142,6 +143,12 @@ export default function AdminLayout() {
   useEffect(() => {
     setMobileOpen(false)
   }, [location.pathname])
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768)
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
 
   return (
     <div className={`admin-layout ${collapsed ? 'admin-layout--collapsed' : ''}`}>
@@ -215,10 +222,10 @@ export default function AdminLayout() {
           <button
             className="admin-topbar__hamburger"
             onClick={() => {
-              if (window.innerWidth <= 768) {
-                setMobileOpen(!mobileOpen)
+              if (isMobile) {
+                setMobileOpen(prev => !prev)
               } else {
-                setCollapsed(!collapsed)
+                setCollapsed(prev => !prev)
               }
             }}
             aria-label="Toggle sidebar"
