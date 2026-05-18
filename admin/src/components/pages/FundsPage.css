@@ -35,3 +35,25 @@
   font-weight: 600;
   color: var(--text-primary);
 }
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .admin-funds {
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .admin-funds__toolbar {
+    justify-content: stretch;
+  }
+
+  .admin-funds__toolbar .admin-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .admin-table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}

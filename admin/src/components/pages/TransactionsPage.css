@@ -33,3 +33,31 @@
   font-weight: 600;
   color: var(--text-primary);
 }
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .admin-transactions {
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .admin-page-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .admin-page-header__search {
+    max-width: 100%;
+  }
+
+  .admin-transactions__date-filter {
+    min-width: unset;
+    width: 100%;
+    flex: unset;
+  }
+
+  .admin-table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}

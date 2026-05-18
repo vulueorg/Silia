@@ -23,7 +23,7 @@ export default function FundsPage() {
 
       <div className="admin-card">
         <div className="admin-table-wrap">
-          <table className="admin-table">
+          <table className="admin-table" style={{ minWidth: 680 }}>
             <thead>
               <tr>
                 <th>Fund Name</th>

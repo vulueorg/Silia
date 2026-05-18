@@ -63,3 +63,30 @@
   background: rgba(100, 116, 139, 0.1);
   color: var(--muted);
 }
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .admin-audit {
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .admin-audit__toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .admin-audit__toolbar .admin-page-header__search {
+    max-width: 100%;
+  }
+
+  .admin-audit__toolbar .admin-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .admin-table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}

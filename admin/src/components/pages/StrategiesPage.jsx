@@ -31,7 +31,7 @@ export default function StrategiesPage() {
 
       <div className="admin-card">
         <div className="admin-table-wrap">
-          <table className="admin-table">
+          <table className="admin-table" style={{ minWidth: 620 }}>
             <thead>
               <tr>
                 <th>Strategy Name</th>

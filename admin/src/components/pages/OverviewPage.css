@@ -286,3 +286,40 @@
   background: rgba(245, 158, 11, 0.1);
   color: var(--warning);
 }
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .admin-overview {
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .admin-overview__stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .admin-stat-card__value {
+    font-size: 20px;
+  }
+
+  .admin-overview__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-overview__stats {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-overview__tx-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .admin-overview__tx-right {
+    align-items: flex-start;
+  }
+}

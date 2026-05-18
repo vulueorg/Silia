@@ -26,8 +26,8 @@ export default function KYCPage() {
 
   return (
     <div className="admin-kyc">
-      <div className="admin-kyc__header">
-        <div className="admin-tabs">
+      <div className="admin-kyc__header" style={{ overflowX: 'auto' }}>
+        <div className="admin-tabs" style={{ flexWrap: 'nowrap', minWidth: 'max-content' }}>
           {tabs.map((t) => (
             <button
               key={t}
@@ -45,7 +45,7 @@ export default function KYCPage() {
 
       <div className="admin-card">
         <div className="admin-table-wrap">
-          <table className="admin-table">
+          <table className="admin-table" style={{ minWidth: 620 }}>
             <thead>
               <tr>
                 <th>Name</th>

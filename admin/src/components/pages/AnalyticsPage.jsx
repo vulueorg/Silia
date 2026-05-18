@@ -47,7 +47,7 @@ export default function AnalyticsPage() {
             <h2 className="admin-card__title">Top Performing Funds</h2>
           </div>
           <div className="admin-table-wrap">
-            <table className="admin-table">
+            <table className="admin-table" style={{ minWidth: 520 }}>
               <thead>
                 <tr>
                   <th>#</th>

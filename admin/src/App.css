@@ -6,13 +6,13 @@
 
 :root {
   --bg: #000;
-  --sidebar-bg: #05080f;
+  --sidebar-bg: #000;
   --sidebar-border: #1a2035;
   --accent: #e53935;
   --accent-hover: #c62828;
   --accent-subtle: rgba(229, 57, 53, 0.08);
   --muted: #64748b;
-  --card-bg: #0a0d14;
+  --card-bg: #000;
   --card-border: #1a2035;
   --success: #22c55e;
   --warning: #f59e0b;
@@ -63,7 +63,7 @@ input, select, textarea {
   height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--sidebar-bg);
+  background: #000;
 }
 ::-webkit-scrollbar-thumb {
   background: #1a2035;
@@ -128,7 +128,7 @@ input, select, textarea {
 }
 
 .admin-table thead tr {
-  background: #07090f;
+  background: #000;
 }
 
 .admin-table th {
@@ -148,7 +148,7 @@ input, select, textarea {
 }
 
 .admin-table tbody tr:nth-child(even) {
-  background: #07090f;
+  background: #050505;
 }
 
 .admin-table tbody tr:hover {

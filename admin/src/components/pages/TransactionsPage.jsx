@@ -58,7 +58,7 @@ export default function TransactionsPage() {
             className="admin-search-input"
           />
         </div>
-        <div className="admin-transactions__date-filter">
+        <div className="admin-transactions__date-filter" style={{ minWidth: 0, flex: '0 0 auto' }}>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
             <line x1="16" y1="2" x2="16" y2="6" />
@@ -77,7 +77,7 @@ export default function TransactionsPage() {
 
       <div className="admin-card">
         <div className="admin-table-wrap">
-          <table className="admin-table">
+          <table className="admin-table" style={{ minWidth: 680 }}>
             <thead>
               <tr>
                 <th>ID</th>

@@ -42,3 +42,25 @@
   color: var(--text-secondary);
   white-space: nowrap;
 }
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .admin-strategies {
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .admin-strategies__toolbar {
+    justify-content: stretch;
+  }
+
+  .admin-strategies__toolbar .admin-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .admin-table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}

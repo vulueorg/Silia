@@ -62,7 +62,7 @@ export default function AuditLogPage() {
 
       <div className="admin-card">
         <div className="admin-table-wrap">
-          <table className="admin-table">
+          <table className="admin-table" style={{ minWidth: 580 }}>
             <thead>
               <tr>
                 <th>Timestamp</th>

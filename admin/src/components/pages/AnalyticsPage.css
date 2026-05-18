@@ -123,3 +123,45 @@
   color: var(--muted);
   font-weight: 500;
 }
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .admin-analytics {
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .admin-analytics__stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .admin-analytics__stat-value {
+    font-size: 20px;
+  }
+
+  .admin-analytics__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-analytics__chart {
+    height: 160px;
+    padding: 16px 12px 12px;
+    gap: 4px;
+  }
+
+  .admin-analytics__bar-label {
+    font-size: 10px;
+  }
+
+  .admin-table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-analytics__stats {
+    grid-template-columns: 1fr;
+  }
+}

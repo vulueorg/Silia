@@ -93,3 +93,29 @@
   font-size: 11px;
   color: var(--muted);
 }
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .admin-approvals {
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .admin-approvals__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-approval-card__footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .admin-actions {
+    width: 100%;
+  }
+
+  .admin-actions .admin-btn {
+    flex: 1;
+    justify-content: center;
+  }
+}

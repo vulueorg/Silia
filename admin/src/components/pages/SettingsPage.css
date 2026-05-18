@@ -204,3 +204,43 @@
   color: var(--success);
   font-weight: 500;
 }
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .admin-settings {
+    padding: 16px;
+    gap: 16px;
+    max-width: 100%;
+  }
+
+  .admin-settings__fields {
+    padding: 16px;
+  }
+
+  .admin-settings__section-header {
+    padding: 16px;
+  }
+
+  .admin-settings__input-wrap {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .admin-settings__toggle-row {
+    padding: 14px 16px;
+  }
+
+  .admin-settings__checkboxes {
+    padding: 14px 16px;
+  }
+
+  .admin-settings__footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .admin-settings__footer .admin-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

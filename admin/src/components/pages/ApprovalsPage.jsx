@@ -70,8 +70,8 @@ export default function ApprovalsPage() {
 
   return (
     <div className="admin-approvals">
-      <div className="admin-approvals__header">
-        <div className="admin-tabs">
+      <div className="admin-approvals__header" style={{ overflowX: 'auto' }}>
+        <div className="admin-tabs" style={{ flexWrap: 'nowrap', minWidth: 'max-content' }}>
           {tabs.map((t) => (
             <button
               key={t}

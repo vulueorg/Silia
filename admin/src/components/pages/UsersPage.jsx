@@ -52,12 +52,13 @@ export default function UsersPage() {
             className="admin-search-input"
           />
         </div>
-        <div className="admin-tabs">
+        <div className="admin-tabs" style={{ overflowX: 'auto', flexWrap: 'nowrap' }}>
           {tabs.map((t) => (
             <button
               key={t}
               className={`admin-tab ${activeTab === t ? 'admin-tab--active' : ''}`}
               onClick={() => setActiveTab(t)}
+              style={{ flexShrink: 0 }}
             >
               {t}
             </button>
@@ -67,7 +68,7 @@ export default function UsersPage() {
 
       <div className="admin-card">
         <div className="admin-table-wrap">
-          <table className="admin-table">
+          <table className="admin-table" style={{ minWidth: 700 }}>
             <thead>
               <tr>
                 <th>Name</th>
