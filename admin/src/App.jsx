@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import AdminLayout from './components/layout/AdminLayout.jsx'
 import OverviewPage from './components/pages/OverviewPage.jsx'
 import UsersPage from './components/pages/UsersPage.jsx'
@@ -13,20 +13,18 @@ import AuditLogPage from './components/pages/AuditLogPage.jsx'
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<AdminLayout><OverviewPage /></AdminLayout>} />
-        <Route path="/users" element={<AdminLayout><UsersPage /></AdminLayout>} />
-        <Route path="/funds" element={<AdminLayout><FundsPage /></AdminLayout>} />
-        <Route path="/kyc" element={<AdminLayout><KYCPage /></AdminLayout>} />
-        <Route path="/transactions" element={<AdminLayout><TransactionsPage /></AdminLayout>} />
-        <Route path="/strategies" element={<AdminLayout><StrategiesPage /></AdminLayout>} />
-        <Route path="/approvals" element={<AdminLayout><ApprovalsPage /></AdminLayout>} />
-        <Route path="/analytics" element={<AdminLayout><AnalyticsPage /></AdminLayout>} />
-        <Route path="/settings" element={<AdminLayout><SettingsPage /></AdminLayout>} />
-        <Route path="/audit" element={<AdminLayout><AuditLogPage /></AdminLayout>} />
-        <Route path="*" element={<Navigate to="/" replace />} />
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route path="/" element={<AdminLayout><OverviewPage /></AdminLayout>} />
+      <Route path="/users" element={<AdminLayout><UsersPage /></AdminLayout>} />
+      <Route path="/funds" element={<AdminLayout><FundsPage /></AdminLayout>} />
+      <Route path="/kyc" element={<AdminLayout><KYCPage /></AdminLayout>} />
+      <Route path="/transactions" element={<AdminLayout><TransactionsPage /></AdminLayout>} />
+      <Route path="/strategies" element={<AdminLayout><StrategiesPage /></AdminLayout>} />
+      <Route path="/approvals" element={<AdminLayout><ApprovalsPage /></AdminLayout>} />
+      <Route path="/analytics" element={<AdminLayout><AnalyticsPage /></AdminLayout>} />
+      <Route path="/settings" element={<AdminLayout><SettingsPage /></AdminLayout>} />
+      <Route path="/audit" element={<AdminLayout><AuditLogPage /></AdminLayout>} />
+      <Route path="*" element={<Navigate to="/" replace />} />
+    </Routes>
   )
 }
