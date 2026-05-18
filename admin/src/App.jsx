@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import AdminLayout from './components/layout/AdminLayout.jsx'
 import OverviewPage from './components/pages/OverviewPage.jsx'
 import UsersPage from './components/pages/UsersPage.jsx'
@@ -13,7 +13,7 @@ import AuditLogPage from './components/pages/AuditLogPage.jsx'
 
 export default function App() {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<AdminLayout />}>
           <Route index element={<OverviewPage />} />
@@ -28,6 +28,6 @@ export default function App() {
           <Route path="audit" element={<AuditLogPage />} />
         </Route>
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   )
 }
