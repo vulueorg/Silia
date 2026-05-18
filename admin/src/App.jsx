@@ -15,19 +15,17 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/*" element={<AdminLayout />}>
-          <Route index element={<OverviewPage />} />
-          <Route path="users" element={<UsersPage />} />
-          <Route path="funds" element={<FundsPage />} />
-          <Route path="kyc" element={<KYCPage />} />
-          <Route path="transactions" element={<TransactionsPage />} />
-          <Route path="strategies" element={<StrategiesPage />} />
-          <Route path="approvals" element={<ApprovalsPage />} />
-          <Route path="analytics" element={<AnalyticsPage />} />
-          <Route path="settings" element={<SettingsPage />} />
-          <Route path="audit" element={<AuditLogPage />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Route>
+        <Route path="/" element={<AdminLayout><OverviewPage /></AdminLayout>} />
+        <Route path="/users" element={<AdminLayout><UsersPage /></AdminLayout>} />
+        <Route path="/funds" element={<AdminLayout><FundsPage /></AdminLayout>} />
+        <Route path="/kyc" element={<AdminLayout><KYCPage /></AdminLayout>} />
+        <Route path="/transactions" element={<AdminLayout><TransactionsPage /></AdminLayout>} />
+        <Route path="/strategies" element={<AdminLayout><StrategiesPage /></AdminLayout>} />
+        <Route path="/approvals" element={<AdminLayout><ApprovalsPage /></AdminLayout>} />
+        <Route path="/analytics" element={<AdminLayout><AnalyticsPage /></AdminLayout>} />
+        <Route path="/settings" element={<AdminLayout><SettingsPage /></AdminLayout>} />
+        <Route path="/audit" element={<AdminLayout><AuditLogPage /></AdminLayout>} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>
   )

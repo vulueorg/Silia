@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Outlet, NavLink, useLocation } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 import './AdminLayout.css'
 import vulueMascot from '../../assets/vulue-mascot.png'
 
@@ -132,7 +132,7 @@ const pageTitles = {
   '/audit': 'Audit Log',
 }
 
-export default function AdminLayout() {
+export default function AdminLayout({ children }) {
   const [collapsed, setCollapsed] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768)
@@ -258,7 +258,7 @@ export default function AdminLayout() {
 
       {/* Main content */}
       <main className="admin-main">
-        <Outlet key={location.pathname} />
+        {children}
       </main>
     </div>
   )
