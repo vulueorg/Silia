@@ -1,0 +1,37 @@
+.admin-kyc {
+  padding: 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.admin-kyc__header {
+  display: flex;
+  align-items: center;
+}
+
+.admin-tab__count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 18px;
+  padding: 0 5px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  font-size: 10px;
+  font-weight: 700;
+  margin-left: 6px;
+}
+
+.admin-tab--active .admin-tab__count {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.admin-kyc__doc-type {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--text-secondary);
+}

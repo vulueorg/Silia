@@ -1,0 +1,133 @@
+.pi-screen {
+  width: 100%;
+  min-height: 100vh;
+  background: #000;
+  font-family: 'Anek Odia', sans-serif;
+  color: #fff;
+  padding: 40px 20px 60px;
+  max-width: 430px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.pi-gradient {
+  display: none;
+}
+
+.pi-header { position: relative; z-index: 1; }
+.pi-header .back-btn {
+  background: none; border: none; cursor: pointer; padding: 8px;
+}
+
+.pi-title {
+  font-weight: 700; font-size: 20px; color: #f1f1f1;
+  text-align: center; margin-top: 40px;
+}
+
+.pi-edit-row {
+  display: flex; justify-content: flex-end; margin-top: 24px;
+}
+.pi-edit {
+  background: none; border: none; color: #fff;
+  font-family: 'Anek Odia', sans-serif; font-size: 11px;
+  text-decoration: underline; cursor: pointer;
+}
+
+.pi-fields {
+  margin-top: 16px;
+  display: flex; flex-direction: column;
+}
+
+.pi-field { padding: 8px 0; }
+.pi-label { font-size: 11px; font-weight: 400; color: #fff; display: block; margin-bottom: 4px; }
+.pi-divider { height: 1px; background: #2c3140; margin-top: 6px; }
+
+/* Locked notice */
+.pi-locked-notice {
+  margin-top: 16px;
+  font-size: 9px;
+  color: #fff;
+  text-align: center;
+  line-height: 1.28;
+}
+.pi-link { text-decoration: underline; cursor: pointer; }
+
+/* Edit mode input box */
+.pi-input-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #2c3140;
+  border-radius: 5px;
+  height: 46px;
+  padding: 0 12px;
+  position: relative;
+}
+
+.pi-input {
+  flex: 1;
+  height: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-family: 'Anek Odia', sans-serif;
+  font-size: 13px;
+}
+.pi-input:disabled { color: #455a64; }
+.pi-input::placeholder { color: #455a64; }
+
+.pi-lock {
+  width: 13px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.pi-dropdown-arrow {
+  font-size: 8px;
+  color: #fff;
+  margin-left: 4px;
+}
+
+/* Save row */
+.pi-save-row {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pi-save-label {
+  font-weight: 500;
+  font-size: 12px;
+  color: #fff;
+}
+
+.pi-save-btn {
+  background: #0170e3;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-family: 'Anek Odia', sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  padding: 8px 16px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 1;
+  width: 85px;
+  height: 40px;
+}
+
+.pi-section-title {
+  margin-top: 32px; font-weight: 500; font-size: 12px; color: #fff;
+  margin-bottom: 8px;
+}
+
+@media (min-width: 768px) {
+  .pi-screen { max-width: 100%; padding: 40px 64px 60px; }
+  .pi-title { font-size: 28px; }
+  .pi-fields { max-width: 500px; margin-left: auto; margin-right: auto; }
+  .pi-label { font-size: 16px; font-weight: 600; }
+  .pi-section-title { font-size: 18px; font-weight: 700; }
+  .pi-edit { font-size: 15px; }
+}

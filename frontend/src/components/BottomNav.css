@@ -1,0 +1,251 @@
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.bottom-nav-glass {
+  position: absolute;
+  inset: 0;
+  background: rgba(24, 31, 35, 0.7);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.bottom-nav-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 430px;
+  height: 100%;
+  padding: 0 32px;
+  pointer-events: auto;
+  gap: 20px;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: rgba(255, 255, 255, 0.6);
+  transition: all 0.2s ease;
+  flex: 0 0 auto;
+}
+
+.nav-item:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.nav-item.active {
+  color: #dedddd;
+  transform: translateY(2px);
+}
+
+.nav-item.active .nav-icon {
+  background: rgba(196, 196, 196, 0.01);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 0.5px solid rgba(255, 255, 255, 0.7);
+  border-radius: 40px;
+  padding: 9px 36px;
+  position: relative;
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  transform: translateY(-3px);
+}
+
+.nav-item.active .nav-icon::before {
+  content: '';
+  position: absolute;
+  inset: -0.5px;
+  border-radius: 40px;
+  background: radial-gradient(
+    circle at center,
+    rgba(196, 196, 196, 0.7) 0%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.nav-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+}
+
+.nav-icon-img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+.nav-label {
+  font-family: 'Anek Odia', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #dedddd;
+  position: relative;
+  z-index: 1;
+  white-space: nowrap;
+  display: none;
+}
+
+.nav-item.active .nav-label {
+  display: block;
+}
+
+/* ══════════════════════════════════════
+   MOBILE  (< 768px)
+══════════════════════════════════════ */
+@media (max-width: 767px) {
+  .screen {
+    padding-bottom: 100px;
+  }
+}
+
+/* ══════════════════════════════════════
+   DESKTOP  (≥ 768px)
+══════════════════════════════════════ */
+@media (min-width: 768px) {
+  .bottom-nav {
+    height: 70px;
+  }
+
+  .bottom-nav-content {
+    max-width: 100%;
+    justify-content: center;
+    gap: 40px;
+    padding: 0;
+  }
+
+  /* each item takes equal space */
+  .nav-item {
+    flex: 0 0 auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    max-width: 160px;
+  }
+
+  /* inactive: icon only, no label */
+  .nav-item:not(.active) .nav-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .nav-item:not(.active) .nav-icon-img {
+    width: 26px;
+    height: 26px;
+  }
+
+  .nav-item:not(.active) .nav-label {
+    display: none;
+  }
+
+  /* active: pill with icon + label side by side, no translateY */
+  .nav-item.active {
+    transform: none;
+  }
+
+  .nav-item.active .nav-icon {
+    transform: none;
+    padding: 10px 28px;
+    gap: 10px;
+  }
+
+  .nav-item.active .nav-label {
+    font-size: 16px;
+  }
+}
+/* Invest Modal */
+.invest-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: transparent;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 1000;
+  padding-bottom: 83px;
+  pointer-events: auto;
+}
+
+.invest-modal {
+  position: relative;
+  width: 194px;
+  height: 153px;
+  pointer-events: auto;
+}
+
+.invest-modal-content {
+  background: linear-gradient(180deg, rgba(196, 196, 196, 0.07) 0%, rgba(255, 255, 255, 0.02) 100%);
+  border: 0.5px solid #525657;
+  border-radius: 25px;
+  backdrop-filter: blur(2px);
+  padding: 14px 16px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  height: 100%;
+}
+
+.invest-modal-option {
+  background: none;
+  border: none;
+  font-family: 'Anek Odia', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.505;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+  width: 100%;
+}
+
+.invest-modal-option:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.invest-modal-option-active {
+  background: #222c31;
+  border-radius: 15px;
+  width: 100%;
+}
+
+.invest-modal-option-active:hover {
+  background: #2a3439;
+}

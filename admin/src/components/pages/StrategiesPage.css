@@ -1,0 +1,44 @@
+.admin-strategies {
+  padding: 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.admin-strategies__toolbar {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.admin-strategies__name-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.admin-strategies__icon {
+  width: 30px;
+  height: 30px;
+  border-radius: var(--radius-sm);
+  background: rgba(229, 57, 53, 0.08);
+  border: 1px solid rgba(229, 57, 53, 0.2);
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.admin-strategies__type-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  background: rgba(100, 116, 139, 0.12);
+  color: var(--text-secondary);
+  white-space: nowrap;
+}

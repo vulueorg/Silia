@@ -1,0 +1,152 @@
+.otp-screen {
+  width: 100%;
+  min-height: 100vh;
+  background: #000;
+  font-family: 'Anek Odia', sans-serif;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.otp-right-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 20px 60px;
+  max-width: 430px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.otp-header {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.otp-header .back-btn {
+  position: absolute;
+  left: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+.otp-title {
+  font-weight: 600;
+  font-size: 29px;
+  line-height: 1.285;
+  width: 100%;
+  text-align: center;
+}
+
+.otp-instruction {
+  margin-top: 48px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+}
+
+/* OTP Boxes */
+.otp-inputs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 32px;
+}
+
+.otp-box {
+  width: 48px;
+  height: 52px;
+  background: rgba(126, 132, 135, 0.1);
+  border: 1px solid #646363;
+  border-radius: 10px;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #fff;
+  outline: none;
+  caret-color: #2254d4;
+  transition: border-color 0.2s;
+}
+
+.otp-box:focus {
+  border-color: #2254d4;
+}
+
+.otp-box.filled {
+  border-color: #2254d4;
+}
+
+.resend-link {
+  background: none;
+  border: none;
+  color: #2254d4;
+  font-family: 'Anek Odia', sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  cursor: pointer;
+  margin-top: 20px;
+  text-align: center;
+  align-self: center;
+}
+
+.otp-disclaimer {
+  margin-top: 32px;
+  font-weight: 500;
+  font-size: 12px;
+  color: #455a64;
+  line-height: 1.29;
+  padding: 0 10px;
+}
+
+.otp-confirm {
+  margin-top: auto;
+  width: 100%;
+  height: 72px;
+  background: #646363;
+  border: none;
+  border-radius: 25px;
+  color: #bcbbbb;
+  font-family: 'Anek Odia', sans-serif;
+  font-size: 20px;
+  cursor: pointer;
+  margin-top: 40px;
+  transition: background 0.2s;
+}
+
+.otp-confirm.active {
+  background: #1410b1;
+}
+
+.otp-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 40px;
+}
+.otp-brand .brand-icon { width: 36px; height: 36px; object-fit: cover; }
+.otp-brand .brand-text { font-weight: 200; font-size: 20px; }
+
+@media (min-width: 768px) {
+  .otp-screen {
+    flex-direction: row;
+  }
+  .otp-right-panel {
+    width: 50%;
+    max-width: none;
+    margin: 0;
+    margin-left: 50%;
+    padding: 60px 64px;
+    justify-content: center;
+  }
+  .otp-header .back-btn { position: relative; left: auto; margin-right: 16px; }
+  .otp-header { justify-content: flex-start; }
+  .otp-title { text-align: left; font-size: 36px; }
+  .otp-header .back-btn-mobile { display: none; }
+  .otp-inputs { gap: 14px; }
+  .otp-box { width: 54px; height: 58px; }
+  .otp-confirm { max-width: 603px; }
+}

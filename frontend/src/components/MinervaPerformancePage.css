@@ -1,0 +1,70 @@
+.mp-screen {
+  background: #000;
+  min-height: 100vh;
+  max-width: 430px;
+  margin: 0 auto;
+  font-family: 'Anek Odia', sans-serif;
+  color: #fff;
+  padding-bottom: 40px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.mp-screen::-webkit-scrollbar { display: none; }
+
+.mp-hero { position: relative; width: 100%; height: 430px; overflow: hidden; }
+.mp-hero-img { width: 100%; height: 100%; object-fit: cover; }
+.mp-header { position: absolute; top: 28px; left: 26px; display: flex; align-items: flex-start; gap: 14px; z-index: 1; }
+.mp-back { background: none; border: none; cursor: pointer; padding: 0; display: flex; align-items: center; margin-top: 8px; }
+.mp-title { font-weight: 500; font-size: 32px; line-height: 1.29; color: #00007e; margin: 0; max-width: 248px; }
+.mp-stat { position: absolute; bottom: 100px; left: 20px; }
+.mp-pct { font-family: 'Poppins', sans-serif; font-weight: 100; font-size: 64px; line-height: 1.505; color: #fff; }
+.mp-pct-label { font-family: 'Poppins', sans-serif; font-weight: 400; font-size: 8px; color: #fff; display: block; margin-left: 50px; }
+
+.mp-tabs { display: flex; align-items: center; padding: 16px 27px 0; }
+.mp-tab { font-weight: 700; font-size: 20px; line-height: 1.29; color: #bcbbbb; background: none; border: none; cursor: pointer; padding: 0; }
+.mp-tab.light { font-weight: 300; }
+.mp-tab-spacer { flex: 1; }
+.mp-lines-wrap { padding: 8px 27px 0; }
+.mp-tab-line-active { width: 215px; height: 2px; background: #fff; }
+.mp-tab-line { width: 100%; height: 1px; background: #333; }
+
+/* Chart */
+.mp-chart-area { padding: 24px 32px 0; position: relative; }
+.mp-chart-svg { width: 100%; height: 200px; }
+.mp-chart-baseline { width: 100%; height: 1px; background: #333; }
+.mp-chart-dates { display: flex; justify-content: space-between; margin-top: 4px; font-family: 'Poppins', sans-serif; font-weight: 300; font-size: 6px; color: #a6a6a6; }
+
+/* Periods */
+.mp-periods { display: flex; gap: 8px; padding: 16px 32px 0; flex-wrap: wrap; }
+.mp-period { background: none; border: none; cursor: pointer; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 8px; color: #fff; padding: 4px 8px; border-radius: 3px; }
+.mp-period.active { background: #1d272b; }
+
+/* Returns */
+.mp-returns { display: flex; align-items: center; gap: 6px; padding: 16px 32px 0; flex-wrap: wrap; }
+.mp-return-label { font-weight: 500; font-size: 9px; color: #fff; }
+.mp-return-val { font-weight: 400; font-size: 7px; }
+.mp-return-val.green { color: #28db0b; }
+
+/* Stats box */
+.mp-stats-box { margin: 32px 14px 0; background: #040709; border: 1px solid #2c3140; border-radius: 30px; padding: 24px 20px; display: flex; min-height: 180px; }
+.mp-stats-left, .mp-stats-right { flex: 1; display: flex; flex-direction: column; gap: 24px; }
+.mp-stats-divider { width: 1px; background: #2c3140; margin: 0 16px; align-self: stretch; }
+.mp-stat-item { display: flex; flex-direction: column; }
+.mp-stat-num { font-weight: 700; font-size: 12px; line-height: 22px; }
+.mp-stat-desc { font-weight: 500; font-size: 12px; line-height: 22px; }
+
+@media (min-width: 768px) {
+  .mp-screen { max-width: 100%; }
+  .mp-hero { height: 500px; max-width: 800px; margin: 0 auto; }
+  .mp-tabs { max-width: 800px; margin: 0 auto; padding: 24px 0 0; }
+  .mp-tab { font-size: 22px; }
+  .mp-lines-wrap { max-width: 800px; margin: 0 auto; padding: 8px 0 0; }
+  .mp-chart-area { max-width: 800px; margin: 0 auto; }
+  .mp-periods { max-width: 800px; margin: 0 auto; }
+  .mp-period { font-size: 11px; padding: 6px 12px; }
+  .mp-returns { max-width: 800px; margin: 0 auto; }
+  .mp-return-label { font-size: 12px; }
+  .mp-return-val { font-size: 10px; }
+  .mp-stats-box { max-width: 800px; margin: 40px auto 0; }
+  .mp-pct-label { font-size: 14px; }
+}

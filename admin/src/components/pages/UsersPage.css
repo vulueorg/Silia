@@ -1,0 +1,204 @@
+.admin-users {
+  padding: 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Page header with search + tabs */
+.admin-page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.admin-page-header__search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-md);
+  padding: 0 14px;
+  flex: 1;
+  max-width: 360px;
+}
+
+.admin-page-header__search svg {
+  width: 16px;
+  height: 16px;
+  color: var(--muted);
+  flex-shrink: 0;
+}
+
+.admin-search-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--text-primary);
+  font-size: 13px;
+  padding: 10px 0;
+  width: 100%;
+}
+
+.admin-search-input::placeholder {
+  color: var(--muted);
+}
+
+/* Tabs */
+.admin-tabs {
+  display: flex;
+  gap: 4px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-md);
+  padding: 4px;
+}
+
+.admin-tab {
+  padding: 7px 16px;
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: var(--radius-sm);
+  transition: background var(--transition), color var(--transition);
+}
+
+.admin-tab:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.admin-tab--active {
+  background: var(--accent);
+  color: #fff;
+}
+
+.admin-tab--active:hover {
+  background: var(--accent-hover);
+  color: #fff;
+}
+
+/* Users name cell */
+.admin-users__name-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.admin-users__avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--accent-subtle);
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Actions */
+.admin-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* Buttons */
+.admin-btn {
+  padding: 7px 14px;
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  font-weight: 500;
+  border: 1px solid transparent;
+  transition: background var(--transition), color var(--transition), border-color var(--transition);
+}
+
+.admin-btn--sm {
+  padding: 5px 12px;
+  font-size: 12px;
+}
+
+.admin-btn--primary {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+.admin-btn--primary:hover {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+}
+
+.admin-btn--ghost {
+  background: transparent;
+  color: var(--text-secondary);
+  border-color: var(--card-border);
+}
+
+.admin-btn--ghost:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
+}
+
+.admin-btn--danger-ghost {
+  background: transparent;
+  color: var(--danger);
+  border-color: rgba(239, 68, 68, 0.3);
+}
+
+.admin-btn--danger-ghost:hover {
+  background: rgba(239, 68, 68, 0.1);
+}
+
+.admin-btn--success-ghost {
+  background: transparent;
+  color: var(--success);
+  border-color: rgba(34, 197, 94, 0.3);
+}
+
+.admin-btn--success-ghost:hover {
+  background: rgba(34, 197, 94, 0.1);
+}
+
+.admin-btn--approve {
+  background: rgba(34, 197, 94, 0.1);
+  color: var(--success);
+  border-color: rgba(34, 197, 94, 0.3);
+}
+
+.admin-btn--approve:hover {
+  background: rgba(34, 197, 94, 0.2);
+}
+
+.admin-btn--reject {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--danger);
+  border-color: rgba(239, 68, 68, 0.3);
+}
+
+.admin-btn--reject:hover {
+  background: rgba(239, 68, 68, 0.2);
+}
+
+/* Badge accent */
+.admin-badge--accent {
+  background: var(--accent-subtle);
+  color: var(--accent);
+}
+
+/* Empty state */
+.admin-table__empty {
+  text-align: center;
+  color: var(--muted);
+  padding: 40px 16px !important;
+  font-size: 14px;
+}

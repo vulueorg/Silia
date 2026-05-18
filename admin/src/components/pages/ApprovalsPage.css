@@ -1,0 +1,95 @@
+.admin-approvals {
+  padding: 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.admin-approvals__header {
+  display: flex;
+  align-items: center;
+}
+
+.admin-approvals__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 16px;
+}
+
+.admin-approvals__empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: var(--muted);
+  padding: 60px 20px;
+  font-size: 14px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-lg);
+}
+
+/* Approval card */
+.admin-approval-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: border-color var(--transition);
+}
+
+.admin-approval-card:hover {
+  border-color: rgba(229, 57, 53, 0.2);
+}
+
+.admin-approval-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.admin-approval-card__date {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.admin-approval-card__title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+
+.admin-approval-card__desc {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.admin-approval-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 8px;
+  border-top: 1px solid var(--card-border);
+  flex-wrap: wrap;
+}
+
+.admin-approval-card__submitter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.admin-approval-card__submitter-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.admin-approval-card__submitter-label {
+  font-size: 11px;
+  color: var(--muted);
+}

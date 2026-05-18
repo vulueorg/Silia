@@ -1,0 +1,153 @@
+.notif-screen {
+  width: 100%;
+  min-height: 100vh;
+  background: #000;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  padding: 40px 20px 60px;
+  max-width: 430px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.notif-back-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  position: absolute;
+  top: 50px;
+  left: 16px;
+}
+
+@media (min-width: 768px) {
+  .notif-back-btn {
+    left: 45px;
+  }
+}
+
+.notif-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding-top: 20px;
+}
+
+.megaphone {
+  width: 50px;
+  height: 50px;
+  transform: rotate(-9.7deg);
+}
+
+.notif-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #f1f1f1;
+}
+
+.notif-divider {
+  height: 1px;
+  background: #2c3140;
+  margin: 20px 0;
+}
+
+.notif-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.notif-item {
+  padding: 8px 0;
+}
+
+.notif-item-title {
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 1.29;
+  margin-bottom: 8px;
+}
+
+.notif-item-date {
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 1.29;
+  color: #aaa;
+  margin-bottom: 8px;
+}
+
+.notif-item-body {
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 1.29;
+}
+
+.notif-item-body.highlight {
+  color: #2f89fc;
+  font-weight: 600;
+}
+
+.notif-item-body.client-id {
+  color: #2254d4;
+  font-weight: 500;
+}
+
+.copy-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 8px;
+  padding: 4px;
+}
+.copy-btn img {
+  width: 20px;
+  height: 19px;
+  opacity: 0.8;
+}
+
+@media (min-width: 768px) {
+  .notif-screen {
+    max-width: 100%;
+    padding: 40px 64px 60px;
+  }
+
+  .notif-back-btn {
+    left: 45px;
+  }
+
+  .notif-back-btn svg {
+    width: 40.5px;
+    height: 40.5px;
+  }
+
+  .megaphone {
+    width: 75px;
+    height: 75px;
+  }
+
+  .notif-title {
+    font-size: 24px;
+  }
+
+  .notif-item-title {
+    font-size: 16.5px;
+  }
+
+  .notif-item-date {
+    font-size: 16.5px;
+  }
+
+  .notif-item-body {
+    font-size: 16.5px;
+  }
+
+  .copy-btn img {
+    width: 30px;
+    height: 28.5px;
+  }
+
+  .notif-list {
+    max-width: 600px;
+  }
+}

@@ -1,0 +1,82 @@
+.at-screen {
+  width: 100%;
+  min-height: 100vh;
+  background: #000;
+  font-family: 'Anek Odia', sans-serif;
+  color: #fff;
+  padding: 40px 20px 60px;
+  max-width: 430px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.at-gradient {
+  display: none;
+}
+
+.at-header { position: relative; z-index: 1; }
+.at-header .back-btn { background: none; border: none; cursor: pointer; padding: 8px; }
+
+.at-title {
+  font-weight: 700; font-size: 20px; color: #fff;
+  text-align: center; margin-top: 40px;
+}
+
+.at-section { padding: 16px 4px; }
+
+.at-type-name {
+  font-weight: 500; font-size: 16px; color: #fff; line-height: 2.3;
+}
+
+.at-current {
+  font-size: 11px; color: #23d223; margin-top: 4px;
+}
+
+.at-type-desc {
+  font-weight: 500; font-size: 12px; color: #646363; line-height: 1.38; margin-top: 8px;
+}
+
+.at-divider { height: 1px; background: #2c3140; margin: 0 4px; }
+
+.at-upgrade-btn {
+  display: block;
+  background: #0b0617;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-family: 'Anek Odia', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 14px 20px;
+  margin: 8px 4px 16px;
+  cursor: pointer;
+  width: calc(100% - 8px);
+}
+
+@media (min-width: 768px) {
+  .at-screen { max-width: 100%; padding: 40px 64px 60px; }
+  .at-title { font-size: 28px; }
+  .at-type-name { font-size: 20px; }
+  .at-type-desc { font-size: 15px; }
+  .at-upgrade-btn { font-size: 17px; max-width: 500px; margin-left: auto; margin-right: auto; }
+}
+
+/* General Partner button */
+.at-gp-btn {
+  background: #0b1a3a;
+  border: 1px solid #2254d4;
+  color: #6b9fff;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.at-gp-btn:hover {
+  background: rgba(34, 84, 212, 0.15);
+  color: #fff;
+}
+
+.at-gp-btn--selected {
+  background: #2254d4;
+  border-color: #2254d4;
+  color: #fff;
+  font-weight: 600;
+}

@@ -1,0 +1,208 @@
+.sb-screen {
+  width: 100%;
+  min-height: 100vh;
+  background: #000;
+  font-family: 'Anek Odia', sans-serif;
+  color: #fff;
+  padding: 0 16px 100px;
+  max-width: 430px;
+  margin: 0 auto;
+}
+
+.sb-title {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 27px;
+  padding-top: 49px;
+  margin: 0;
+}
+
+.sb-subtitle {
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 1.29;
+  color: #ebf0ff;
+  margin: 7px 0 0;
+  max-width: 190px;
+}
+
+/* Tab bar */
+.sb-tab-bar {
+  display: flex;
+  align-items: center;
+  height: 56px;
+  margin: 10px -2px 0;
+  background: #0d1117;
+  border: 1px solid #22282c;
+  border-radius: 25px;
+  padding: 0 4px;
+}
+
+.sb-tab-btn {
+  flex: 1;
+  background: none;
+  border: none;
+  font-family: 'Anek Odia', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #455a64;
+  cursor: pointer;
+  height: 36px;
+  line-height: 1.29;
+  border-radius: 20px;
+}
+
+.sb-tab-btn.active {
+  background: #0a36a6;
+  backdrop-filter: blur(5px);
+  color: #fff;
+  /* Figma: active pill w=120, centered */
+  flex: 0 0 120px;
+}
+
+/* Cards */
+.sb-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+/* Each card: w=371, total h=480/472 — image is 371×371, desc strip below */
+.sb-card {
+  width: 331px;
+  margin: 0 auto;
+  border-radius: 0;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid rgba(255,255,255,0.15);
+  box-sizing: border-box;
+}
+
+/* Full-width square image */
+.sb-card-img-wrap {
+  width: 331px;
+  height: 371px;
+  position: relative;
+  overflow: hidden;
+}
+
+.sb-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Overlay on top of image */
+.sb-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 371px;
+  display: flex;
+  flex-direction: column;
+  padding: 28px 15px 20px;
+  box-sizing: border-box;
+}
+
+/* Name row */
+.sb-card-name-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sb-card-name {
+  font-family: 'Anek Odia', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.29;
+}
+
+.sb-card-dots {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+}
+
+/* Percentage — pushed to bottom of overlay */
+.sb-card-stat {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.sb-card-pct {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 100;
+  font-size: 64px;
+  line-height: 1.505;
+}
+
+.sb-card-period {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 1.29;
+}
+
+/* See my plans — right-aligned */
+.sb-card-link {
+  background: none;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.28;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 10px 20px;
+  align-self: flex-end;
+  margin-top: 4px;
+}
+
+.sb-card-link-bottom {
+  margin-top: auto;
+  align-self: flex-end;
+}
+
+/* Description strip */
+.sb-card-desc-box {
+  background: #000;
+  padding: 12px 15px 20px;
+}
+
+.sb-card-desc {
+  font-family: 'Anek Odia', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.29;
+  color: #bcbbbb;
+  margin: 0;
+}
+
+/* Disclaimer */
+.sb-disclaimer {
+  margin-top: 24px;
+  border-radius: 12px;
+  padding: 26px 24px;
+  background: rgba(255,255,255,0.02);
+  border: 0.5px solid rgba(255,255,255,0.06);
+}
+
+.sb-disclaimer p {
+  font-family: 'Anek Odia', sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 1.29;
+  color: #455a64;
+  margin: 0;
+}
+
+.sb-disclaimer-link {
+  color: #455a64;
+  text-decoration: none;
+}

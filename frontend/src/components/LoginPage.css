@@ -1,0 +1,355 @@
+/* ===== Login Screen ===== */
+.login-screen {
+  width: 100%;
+  min-height: 100vh;
+  background: #000 url('../assets/Desktop - 35.png') right center/cover no-repeat;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Anek Odia', sans-serif;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* Title */
+.login-title {
+  position: relative;
+  z-index: 1;
+  font-size: 48px;
+  line-height: 1.4;
+  color: #ebf0ff;
+  text-align: center;
+  margin-bottom: 48px;
+  align-self: center;
+  margin-left: 0;
+  transform: translateX(-15px);
+}
+.title-light {
+  font-weight: 400;
+}
+.title-bold {
+  font-weight: 600;
+}
+
+/* Form */
+.login-form {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 448px;
+}
+
+/* Field base */
+.field {
+  width: 100%;
+  height: 51px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 15px;
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  position: relative;
+}
+
+.account-field {
+  background: rgba(4, 7, 9, 0.7);
+  cursor: pointer;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.account-dropdown-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.account-dropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  background: #0a0a0a;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 15px;
+  overflow: hidden;
+  z-index: 100;
+  animation: dropdownSlide 0.15s ease-out;
+}
+
+@keyframes dropdownSlide {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.account-dropdown-item {
+  width: 100%;
+  padding: 14px 20px;
+  font-family: 'Anek Odia', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: #bcbbbb;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.account-dropdown-item:hover {
+  background: #1511d1;
+  color: #fff;
+}
+
+.account-dropdown-item.active {
+  background: #1511d1;
+  color: #fff;
+}
+
+.field:not(.account-field) {
+  background: rgba(126, 132, 135, 0.1);
+  opacity: 0.85;
+}
+
+.field-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.28;
+}
+.field-text.muted {
+  color: #bcbbbb;
+}
+
+.arrow-down {
+  width: 9px;
+  height: 14px;
+  transform: rotate(-90deg);
+  opacity: 0.7;
+}
+
+.field-input {
+  flex: 1;
+  background: none;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-family: 'Anek Odia', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  height: 100%;
+}
+.field-input::placeholder {
+  color: #bcbbbb;
+}
+
+.field-divider {
+  position: absolute;
+  right: 80px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.3);
+  display: none;
+}
+
+/* Password */
+.pw-visible {
+  width: 100%;
+}
+
+.eye-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+.eye-toggle:hover {
+  opacity: 1;
+}
+
+/* Confirm button */
+.confirm-btn {
+  width: 100%;
+  height: 72px;
+  background: #1410b1;
+  border: none;
+  border-radius: 25px;
+  color: #bcbbbb;
+  font-family: 'Anek Odia', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  cursor: pointer;
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, transform 0.1s;
+}
+.confirm-btn:hover {
+  background: #1a14c8;
+}
+.confirm-btn:active {
+  transform: scale(0.98);
+}
+.confirm-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Spinner */
+.spinner {
+  width: 22px;
+  height: 22px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Forgot password */
+.forgot-link {
+  position: relative;
+  z-index: 1;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-family: 'Anek Odia', sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  cursor: pointer;
+  margin-top: 16px;
+  padding: 0;
+}
+
+/* Brand */
+.login-brand {
+  position: absolute;
+  bottom: 40px;
+  right: 48px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 1;
+}
+
+.brand-mascot {
+  width: 36px;
+  height: 36px;
+  object-fit: cover;
+}
+
+.brand-name {
+  font-weight: 200;
+  font-size: 24px;
+  color: #fff;
+}
+
+/* ===== Mobile background swap (≤500px) ===== */
+@media (max-width: 500px) {
+  .login-screen {
+    background-image: url('../assets/Cilia background login.png');
+    background-position: center center;
+    background-size: cover;
+  }
+}
+
+/* ===== Mobile adjustments ===== */
+@media (max-width: 767px) {
+  .login-screen {
+    padding: 32px 16px;
+    justify-content: center;
+    background-position: right center;
+    background-size: cover;
+  }
+
+  .login-title {
+    font-size: 36px;
+    margin-left: 0;
+    align-self: center;
+    margin-bottom: 36px;
+  }
+
+  .login-form {
+    max-width: 100%;
+  }
+
+  .field {
+    height: 48px;
+    padding: 0 16px;
+  }
+
+  .confirm-btn {
+    height: 60px;
+    font-size: 18px;
+  }
+
+  .login-brand {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    margin-top: 48px;
+    justify-content: center;
+  }
+}
+
+/* ===== Desktop ===== */
+@media (min-width: 768px) {
+  .login-screen {
+    align-items: center;
+    justify-content: center;
+    padding: 57px 20px;
+    background-position: right center;
+    background-size: cover;
+  }
+
+  .login-title {
+    margin-left: 0;
+    align-self: center;
+    text-align: center;
+  }
+
+  .login-form {
+    max-width: 448px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .login-screen {
+    padding: 57px 20px;
+    background-position: center right;
+    background-size: cover;
+  }
+
+  .login-title {
+    font-size: 48px;
+  }
+}
+
+/* ===== Large screens ===== */
+@media (min-width: 1440px) {
+  .login-screen {
+    background-position: center right;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+/* ===== Ultra-wide screens ===== */
+@media (min-width: 1920px) {
+  .login-screen {
+    background-position: center right;
+    background-size: auto 100%;
+  }
+}

@@ -1,0 +1,258 @@
+.bt-screen {
+  width: 100%;
+  min-height: 100vh;
+  background: #000;
+  font-family: 'Anek Odia', sans-serif;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.bt-right-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 20px 60px;
+  max-width: 430px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.bt-header {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.bt-header .back-btn {
+  position: absolute;
+  left: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.bt-title {
+  font-weight: 600;
+  font-size: 29px;
+  line-height: 1.285;
+  width: 100%;
+  text-align: center;
+}
+
+/* Amount input */
+.amount-field {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  border: 0.5px solid #646363;
+  border-radius: 7px;
+  height: 48px;
+  padding: 0 16px;
+  transition: border-color 0.2s;
+}
+
+.amount-field.has-value {
+  border-color: #2254d4;
+}
+
+.amount-field.has-value .amount-input {
+  color: #fff;
+}
+
+.naira-symbol {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: #fff;
+}
+
+.amount-divider {
+  width: 1px;
+  height: 27px;
+  background: rgba(255, 255, 255, 0.3);
+  margin: 0 12px;
+}
+
+.amount-input {
+  flex: 1;
+  background: none;
+  border: none;
+  outline: none;
+  color: #bcbbbb;
+  font-family: 'Anek Odia', sans-serif;
+  font-size: 16px;
+  height: 100%;
+}
+.amount-input::placeholder {
+  color: #bcbbbb;
+}
+
+.amount-hint {
+  margin-top: 8px;
+  font-size: 10px;
+  color: #455a64;
+  line-height: 1.29;
+}
+.hint-light { font-weight: 500; }
+.hint-bold { font-weight: 700; }
+
+/* Fee card */
+.fee-card {
+  margin-top: 24px;
+  border: 1px solid #2c3140;
+  border-radius: 15px;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.fee-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.fee-label {
+  font-size: 13px;
+  color: #fff;
+  font-weight: 700;
+  max-width: 220px;
+}
+
+.fee-value {
+  font-size: 14px;
+  color: #fff;
+  font-weight: 600;
+  text-align: right;
+}
+
+.fee-value.accent {
+  color: #fff;
+  font-size: 28px;
+}
+
+/* Saved account */
+.section-label-bt {
+  margin-top: 32px;
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.saved-account {
+  background: #030410;
+  border: 1px solid #2254d4;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.account-glow {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 79px;
+  height: 79px;
+  background: radial-gradient(circle, rgba(34, 84, 212, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.account-info {
+  flex: 1;
+}
+
+.account-name {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  color: #fff;
+  margin: 0 0 4px;
+}
+
+.account-number {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  color: #b4b4b4;
+  margin: 0;
+}
+
+.account-bank {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  color: #b4b4b4;
+  margin: 0;
+}
+
+.bank-logo {
+  width: 30px;
+  height: 29px;
+  flex-shrink: 0;
+}
+
+/* Warning */
+.bt-warning {
+  margin-top: 32px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  color: #cc2727;
+  line-height: 1.29;
+}
+
+/* Confirm */
+.bt-confirm {
+  margin-top: auto;
+  width: 100%;
+  height: 72px;
+  background: #646363;
+  border: none;
+  border-radius: 25px;
+  color: #bcbbbb;
+  font-family: 'Anek Odia', sans-serif;
+  font-size: 20px;
+  cursor: pointer;
+  margin-top: 40px;
+  transition: background 0.2s;
+}
+
+.bt-confirm.active {
+  background: #1410b1;
+}
+
+/* Brand */
+.bt-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 40px;
+}
+.bt-brand .brand-icon { width: 36px; height: 36px; object-fit: cover; }
+.bt-brand .brand-text { font-weight: 200; font-size: 20px; }
+
+@media (min-width: 768px) {
+  .bt-screen {
+    flex-direction: row;
+  }
+  .bt-right-panel {
+    width: 50%;
+    max-width: none;
+    margin: 0;
+    margin-left: 50%;
+    padding: 60px 64px;
+    justify-content: center;
+  }
+  .bt-header .back-btn { position: relative; left: auto; margin-right: 16px; }
+  .bt-header { justify-content: flex-start; }
+  .bt-title { text-align: left; font-size: 36px; }
+  .bt-header .back-btn-mobile { display: none; }
+  .saved-account { max-width: 603px; }
+  .bt-confirm { max-width: 603px; }
+}

@@ -1,0 +1,81 @@
+.nok-screen {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #000d2e 0%, #000 41%);
+  font-family: 'Anek Odia', sans-serif;
+  color: #fff;
+  padding: 40px 20px 60px;
+  max-width: 430px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.nok-gradient {
+  position: absolute; top: 0; left: 0;
+  width: 100%; height: 126px;
+  background: linear-gradient(187deg, rgba(21,118,121,0) 48%, rgba(47,105,255,0.2) 85%);
+  transform: rotate(180deg); pointer-events: none;
+}
+
+.nok-header { position: relative; z-index: 1; }
+.nok-header .back-btn { background: none; border: none; cursor: pointer; padding: 8px; }
+
+.nok-title {
+  font-weight: 700; font-size: 20px; color: #f1f1f1;
+  text-align: center; margin-top: 40px;
+}
+
+.nok-section-row {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-top: 32px;
+}
+
+.nok-section-label {
+  font-weight: 500; font-size: 12px; color: #fff;
+}
+.nok-section-label.second { margin-top: 32px; display: block; }
+
+.nok-edit {
+  background: none; border: none; color: #fff;
+  font-family: 'Anek Odia', sans-serif; font-size: 11px;
+  text-decoration: underline; cursor: pointer;
+}
+
+.nok-fields { margin-top: 12px; }
+.nok-field { padding: 10px 0; }
+.nok-label { font-size: 11px; font-weight: 400; color: #fff; display: block; margin-bottom: 4px; }
+.nok-divider { height: 1px; background: #2c3140; margin-top: 8px; }
+
+/* Edit mode */
+.nok-input-box {
+  display: flex; align-items: center;
+  border: 1px solid #2c3140; border-radius: 5px; height: 46px; padding: 0 12px;
+}
+.nok-input {
+  flex: 1; height: 100%; background: none; border: none; outline: none;
+  color: #fff; font-family: 'Anek Odia', sans-serif; font-size: 13px;
+}
+.nok-input:focus { border-color: #2254d4; }
+.nok-input::placeholder { color: #455a64; }
+
+.nok-save-row {
+  margin-top: 24px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nok-save-label { font-weight: 500; font-size: 12px; color: #fff; }
+.nok-save-btn {
+  background: #0170e3; border: none; border-radius: 5px;
+  color: #fff; font-family: 'Anek Odia', sans-serif; font-weight: 500;
+  font-size: 13px; padding: 8px 16px; cursor: pointer;
+  text-align: center; line-height: 1; width: 85px; height: 40px;
+}
+
+@media (min-width: 768px) {
+  .nok-screen { max-width: 100%; padding: 40px 64px 60px; }
+  .nok-title { font-size: 28px; }
+  .nok-label { font-size: 16px; font-weight: 600; }
+  .nok-section-label { font-size: 18px; font-weight: 700; }
+  .nok-edit { font-size: 15px; }
+  .nok-fields { max-width: 500px; margin-left: auto; margin-right: auto; }
+  .nok-section-row { max-width: 500px; margin-left: auto; margin-right: auto; }
+}

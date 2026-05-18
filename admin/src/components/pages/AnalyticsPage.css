@@ -1,0 +1,125 @@
+.admin-analytics {
+  padding: 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Stats row */
+.admin-analytics__stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.admin-analytics__stat-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.admin-analytics__stat-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.admin-analytics__stat-value {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.admin-analytics__stat-sub {
+  font-size: 12px;
+  color: var(--success);
+  font-weight: 500;
+}
+
+/* Two-column grid */
+.admin-analytics__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 1024px) {
+  .admin-analytics__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Table cells */
+.admin-analytics__rank {
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.admin-analytics__aum {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.admin-analytics__return {
+  font-weight: 700;
+  color: var(--success);
+}
+
+/* Bar chart */
+.admin-analytics__chart {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  gap: 8px;
+  padding: 24px 20px 16px;
+  height: 220px;
+}
+
+.admin-analytics__bar-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  flex: 1;
+  height: 100%;
+}
+
+.admin-analytics__bar-value {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.admin-analytics__bar-wrap {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.admin-analytics__bar {
+  width: 70%;
+  background: linear-gradient(180deg, var(--accent) 0%, rgba(229, 57, 53, 0.4) 100%);
+  border-radius: 4px 4px 0 0;
+  min-height: 4px;
+  transition: opacity var(--transition);
+}
+
+.admin-analytics__bar-group:hover .admin-analytics__bar {
+  opacity: 0.8;
+}
+
+.admin-analytics__bar-label {
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 500;
+}

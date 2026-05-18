@@ -1,0 +1,160 @@
+.tc-screen {
+  width: 100%;
+  min-height: 100vh;
+  background: #000;
+  font-family: 'Anek Odia', sans-serif;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.tc-right-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 20px 60px;
+  max-width: 430px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.tc-header {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.tc-header .back-btn {
+  position: absolute;
+  left: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+.tc-title {
+  font-weight: 600;
+  font-size: 29px;
+  line-height: 1.285;
+  width: 100%;
+  text-align: center;
+}
+
+/* Bank details */
+.bank-details {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0 10px;
+}
+.bd-row {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.505;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+.bd-label {
+  font-weight: 600;
+}
+.copy-acct {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px;
+  margin-left: 8px;
+}
+.copy-acct img {
+  width: 23px;
+  height: 23px;
+}
+
+.tc-divider {
+  height: 1px;
+  background: #2c3140;
+  margin: 32px 0;
+}
+
+/* Funded amount */
+.funded-section {
+  padding: 0 10px;
+}
+.funded-label {
+  font-weight: 500;
+  font-size: 12px;
+  color: #fff;
+  line-height: 1.265;
+  max-width: 143px;
+}
+.funded-amount {
+  font-weight: 800;
+  font-size: 24px;
+  color: #fff;
+  margin-top: 12px;
+  line-height: 22px;
+}
+
+/* Disclaimer */
+.tc-disclaimer {
+  margin-top: 32px;
+  font-weight: 500;
+  font-size: 12px;
+  color: #455a64;
+  line-height: 1.29;
+  padding: 0 10px;
+}
+.disclaimer-bold {
+  font-weight: 700;
+  color: #6d8b9a;
+}
+
+/* Confirm */
+.tc-confirm {
+  margin-top: auto;
+  width: 100%;
+  height: 72px;
+  background: #1410b1;
+  border: none;
+  border-radius: 25px;
+  color: #bcbbbb;
+  font-family: 'Anek Odia', sans-serif;
+  font-size: 20px;
+  cursor: pointer;
+  margin-top: 40px;
+  transition: background 0.2s;
+}
+.tc-confirm:hover {
+  background: #1a14c8;
+}
+
+/* Brand */
+.tc-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 40px;
+}
+.tc-brand .brand-icon { width: 36px; height: 36px; object-fit: cover; }
+.tc-brand .brand-text { font-weight: 200; font-size: 20px; }
+
+@media (min-width: 768px) {
+  .tc-screen {
+    flex-direction: row;
+  }
+  .tc-right-panel {
+    width: 50%;
+    max-width: none;
+    margin: 0;
+    margin-left: 50%;
+    padding: 60px 64px;
+    justify-content: center;
+  }
+  .tc-header .back-btn { position: relative; left: auto; margin-right: 16px; }
+  .tc-header { justify-content: flex-start; }
+  .tc-title { text-align: left; font-size: 36px; }
+  .tc-header .back-btn-mobile { display: none; }
+  .tc-confirm { max-width: 603px; }
+}

@@ -1,0 +1,111 @@
+.settings-screen {
+  width: 100%;
+  min-height: 100vh;
+  background: #000;
+  font-family: 'Anek Odia', sans-serif;
+  color: #fff;
+  padding: 40px 20px 100px;
+  max-width: 430px;
+  margin: 0 auto;
+}
+
+.settings-back {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  margin-bottom: 12px;
+}
+
+.settings-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  margin-top: 20px;
+}
+
+.settings-avatar {
+  width: 81px;
+  height: 81px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.settings-name {
+  font-weight: 500;
+  font-size: 13px;
+  margin-top: 12px;
+}
+
+.settings-id-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.settings-id {
+  font-weight: 500;
+  font-size: 9px;
+  color: #bcbbbb;
+}
+
+.settings-copy {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.settings-copy img {
+  width: 17px;
+  height: 17px;
+}
+
+.settings-verified {
+  font-weight: 500;
+  font-size: 16px;
+  color: #23d223;
+  margin-top: 8px;
+}
+
+/* Menu */
+.settings-menu {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.settings-menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #010a0e;
+  border: 1px solid rgba(69, 90, 100, 0.08);
+  border-radius: 15px;
+  height: 63px;
+  padding: 0 24px;
+  cursor: pointer;
+  color: #fff;
+  font-family: 'Anek Odia', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+/* Sign Out */
+.settings-signout {
+  display: block;
+  margin: 32px auto 0;
+  background: none;
+  border: none;
+  color: #c61b1b;
+  font-family: 'Anek Odia', sans-serif;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .settings-screen { max-width: 100%; padding: 40px 64px 60px; }
+  .settings-menu { max-width: 500px; margin-left: auto; margin-right: auto; }
+  .settings-name { font-size: 24px; }
+}

@@ -1,0 +1,85 @@
+.jp-screen {
+  width: 100%;
+  min-height: 100vh;
+  background: #000;
+  font-family: 'Anek Odia', sans-serif;
+  color: #fff;
+  padding: 40px 20px 60px;
+  max-width: 430px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.jp-header {
+  display: flex; align-items: center; position: relative;
+}
+.jp-header .back-btn {
+  position: absolute; left: 0; background: none; border: none; cursor: pointer; padding: 8px;
+}
+.jp-title {
+  font-weight: 600; font-size: 29px; line-height: 1.285; width: 100%; text-align: center;
+}
+
+.jp-instruction {
+  margin-top: 60px;
+  font-weight: 400; font-size: 16px; text-align: center;
+  letter-spacing: -0.5px; line-height: 20px;
+}
+
+.jp-field {
+  margin-top: 40px;
+  backdrop-filter: blur(2px);
+  background: rgba(126, 132, 135, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 15px;
+  height: 51px;
+  padding: 0 16px;
+  opacity: 0.7;
+  transition: border-color 0.2s, opacity 0.2s;
+  display: flex;
+  align-items: center;
+}
+.jp-field.has-value { border-color: #2254d4; opacity: 1; }
+
+.jp-input {
+  flex: 1; height: 100%; background: none; border: none; outline: none;
+  color: #fff; font-family: 'Anek Odia', sans-serif; font-size: 16px;
+}
+.jp-input::placeholder { color: #bcbbbb; }
+
+.jp-verifying-inline {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.jp-spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: jp-spin 0.6s linear infinite;
+}
+
+@keyframes jp-spin {
+  to { transform: rotate(360deg); }
+}
+
+.jp-confirm {
+  margin-top: auto; width: 100%; height: 72px; background: #646363;
+  border: none; border-radius: 25px; color: #bcbbbb;
+  font-family: 'Anek Odia', sans-serif; font-size: 20px;
+  cursor: pointer; margin-top: 40px; transition: background 0.2s;
+}
+.jp-confirm.active { background: #1410b1; }
+
+@media (min-width: 768px) {
+  .jp-screen { max-width: 100%; padding: 40px 64px 60px; }
+  .jp-confirm { max-width: 400px; align-self: center; }
+}

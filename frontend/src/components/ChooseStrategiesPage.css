@@ -1,0 +1,183 @@
+.cs-screen {
+  width: 100%;
+  min-height: 100vh;
+  background: #000;
+  font-family: 'Anek Odia', sans-serif;
+  color: #fff;
+  padding: 40px 20px 60px;
+  max-width: 430px;
+  margin: 0 auto;
+}
+
+.cs-header {
+  position: relative;
+}
+.cs-header .back-btn {
+  position: absolute; left: 0; top: 0; background: none; border: none; cursor: pointer; padding: 8px;
+}
+
+.cs-title {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 27px;
+  margin-top: 8px;
+  margin-left: 40px;
+  width: 221px;
+}
+
+.cs-list {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Card */
+.cs-card {
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.cs-banner {
+  position: relative;
+  height: 158px;
+  overflow: hidden;
+}
+.cs-banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.cs-banner-img.flipped {
+  transform: rotate(180deg);
+}
+
+.cs-name {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.29;
+}
+
+.cs-default-tag {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 6px;
+  color: #dedddd;
+}
+
+.cs-card-bottom {
+  background: linear-gradient(180deg, #1a1a2e 0%, #0a0a0f 100%);
+  padding: 14px 16px 16px;
+  position: relative;
+}
+
+.cs-min {
+  font-size: 14px;
+  color: #bcbbbb;
+}
+.cs-min-light { font-weight: 300; }
+.cs-min-bold { font-weight: 700; }
+
+.cs-alloc-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.cs-alloc-label {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 10px;
+  color: #616f76;
+}
+
+.cs-pct-box {
+  display: flex;
+  align-items: center;
+  border: 0.7px solid #646363;
+  border-radius: 3px;
+  height: 18px;
+  padding: 0 4px;
+  gap: 2px;
+}
+
+.cs-pct-input {
+  width: 24px;
+  background: none;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 8px;
+  text-align: center;
+}
+
+.cs-pct-sign {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 8px;
+  color: #646363;
+}
+
+.cs-alloc-amt {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #fff;
+  margin-left: auto;
+}
+
+/* Checkbox */
+.cs-check {
+  position: absolute;
+  top: -140px;
+  right: 16px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid #455a64;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cs-check.checked {
+  background: #2254d4;
+  border-color: #2254d4;
+}
+.cs-checkmark {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* Confirm */
+.cs-confirm {
+  margin-top: 40px;
+  width: 100%;
+  height: 72px;
+  background: #1410b1;
+  border: 1px solid #2254d4;
+  border-radius: 25px;
+  color: #bcbbbb;
+  font-family: 'Anek Odia', sans-serif;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .cs-screen { max-width: 100%; padding: 40px 64px 60px; }
+  .cs-list { max-width: 800px; margin-left: auto; margin-right: auto; }
+  .cs-confirm { max-width: 400px; display: block; margin-left: auto; margin-right: auto; }
+  .cs-title { text-align: center; margin-left: auto; margin-right: auto; width: auto; }
+}

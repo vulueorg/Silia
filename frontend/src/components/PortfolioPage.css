@@ -1,0 +1,846 @@
+.portfolio-screen {
+  width: 100%;
+  min-height: 100vh;
+  background: #000;
+  font-family: 'Anek Odia', sans-serif;
+  color: #fff;
+  padding: 0 16px 100px;
+  max-width: 430px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Title */
+.portfolio-title {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 27px;
+  padding-top: 49px;
+  margin: 0 0 24px;
+}
+
+/* Total Wealth */
+.portfolio-wealth-label {
+  font-weight: 200;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0 0 8px;
+}
+
+.portfolio-balance-row {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.portfolio-naira {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 100;
+  font-size: 32px;
+  line-height: 22px;
+  color: #fff;
+  letter-spacing: -0.408px;
+}
+
+.portfolio-dec {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+  font-size: 20px;
+  line-height: 22px;
+  color: rgba(255,255,255,0.5);
+  letter-spacing: -0.408px;
+}
+
+.portfolio-currency {
+  font-size: 13px;
+  color: #184ace;
+  font-weight: 300;
+  margin-left: 4px;
+}
+
+.portfolio-gain-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 8px;
+}
+
+.portfolio-gain {
+  font-weight: 300;
+  font-size: 10px;
+  color: #23d223;
+  line-height: 1.28;
+}
+
+.portfolio-note {
+  font-weight: 400;
+  font-size: 8px;
+  color: #dedddd;
+  line-height: 1.29;
+  margin: 0 0 28px;
+  max-width: 361px;
+}
+
+/* Section tabs: Plans & Assets / Performance / Allocation */
+.portfolio-section-tabs {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.psec-tab {
+  background: none;
+  border: none;
+  font-family: 'Anek Odia', sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  color: #455a64;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1.28;
+}
+
+.psec-tab.active {
+  color: #fff;
+}
+
+.portfolio-divider {
+  height: 1px;
+  background: #161a21;
+  margin-bottom: 20px;
+}
+
+/* View based on label */
+.portfolio-view-label {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  color: #fff;
+  text-align: center;
+  margin: 0 0 10px;
+}
+
+/* Plans / Securities Breakdown toggle */
+.portfolio-view-toggle {
+  display: flex;
+  border: 1px solid #22282c;
+  border-radius: 25px;
+  overflow: hidden;
+  height: 44px;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.pvtab {
+  flex: 1;
+  background: none;
+  border: none;
+  font-family: 'Anek Odia', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  color: #455a64;
+  cursor: pointer;
+  transition: all 0.2s;
+  padding: 0 12px;
+}
+
+.pvtab.active {
+  background: #fff;
+  color: #000;
+  border-radius: 20px;
+  margin: 4px;
+  font-weight: 500;
+}
+
+/* Strategies / Strategy Baskets / SPVs sub-toggle */
+.portfolio-sub-toggle {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.psubtab {
+  flex: 1;
+  background: none;
+  border: none;
+  font-family: 'Anek Odia', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #455a64;
+  cursor: pointer;
+  padding: 0;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.psubtab.active {
+  color: #fff;
+  background: #0a36a6;
+  border-radius: 20px;
+  height: 36px;
+  backdrop-filter: blur(5px);
+}
+
+/* Strategy cards */
+.portfolio-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.pstrat-card {
+  position: relative;
+  height: 151px;
+  border: 1px solid #161a21;
+  border-radius: 30px;
+  overflow: hidden;
+  cursor: pointer;
+  background: linear-gradient(90deg, #000 46%, rgba(0,0,0,0.9) 60.6%, rgba(0,0,0,0.8) 75.4%, rgba(0,0,0,0.7) 87.9%, rgba(0,0,0,0.4) 100%);
+}
+
+.pstrat-img-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 151px;
+  height: 151px;
+  border-radius: 30px 0 0 30px;
+  overflow: hidden;
+}
+
+.pstrat-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Strategy name — top left over the image */
+.pstrat-name {
+  position: absolute;
+  top: 17px;
+  left: 13px;
+  font-size: 13px;
+  font-weight: 400;
+  color: #fff;
+  z-index: 2;
+}
+
+.pstrat-name.bold {
+  font-weight: 700;
+}
+
+/* Right side content */
+.pstrat-right {
+  position: absolute;
+  right: 16px;
+  top: 37px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  max-width: 48%;
+}
+
+.pstrat-chevron {
+  position: absolute;
+  right: 19px;
+  top: 17px;
+  opacity: 0.6;
+}
+
+.pstrat-balance {
+  font-family: 'Anek Odia', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #fff;
+  line-height: 1.29;
+}
+
+.pstrat-return-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.pstrat-return-label {
+  font-size: 7px;
+  color: #646363;
+  font-weight: 500;
+  line-height: 1.505;
+}
+
+.pstrat-gain-val {
+  font-size: 7px;
+  color: #23d223;
+  font-weight: 400;
+  line-height: 1.29;
+}
+
+.pstrat-unlock {
+  font-size: 6px;
+  color: #9ab6fe;
+  font-weight: 500;
+  line-height: 1.29;
+  text-align: right;
+  margin: 0;
+}
+
+.pstrat-unlock .bold {
+  font-weight: 700;
+}
+
+/* Partner banner */
+.portfolio-partner-banner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  backdrop-filter: blur(2px);
+  background: linear-gradient(90deg, #000119 0%, #0a0a0b 73%);
+  border: 1px solid #2254d4;
+  border-radius: 40px;
+  padding: 9px 16px;
+  height: 78px;
+  opacity: 0.7;
+}
+
+.portfolio-partner-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 35px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.portfolio-partner-text {
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.28;
+  color: #fff;
+}
+
+/* ── Securities Breakdown ── */
+
+.sec-asset-tabs {
+  display: flex;
+  gap: 4px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  margin-top: 16px;
+  margin-bottom: 12px;
+  padding-bottom: 2px;
+}
+.sec-asset-tabs::-webkit-scrollbar { display: none; }
+
+.sec-asset-tab {
+  background: none;
+  border: none;
+  font-family: 'Anek Odia', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  color: #455a64;
+  cursor: pointer;
+  padding: 8px 10px;
+  white-space: nowrap;
+  line-height: 22px;
+}
+
+.sec-asset-tab.active {
+  background: #040709;
+  border: 0.6px solid #3d3d3d;
+  border-radius: 25px;
+  color: #fff;
+  padding: 8px 14px;
+}
+
+/* Equities card */
+.sec-eq-card {
+  background: #18202b;
+  border-radius: 25px;
+  padding: 15px 16px;
+  margin-bottom: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.sec-eq-subtitle {
+  font-size: 12px;
+  color: #fff;
+  font-weight: 500;
+  margin: 0 0 10px;
+}
+
+.sec-eq-balance {
+  display: flex;
+  align-items: baseline;
+  gap: 1px;
+}
+
+.sec-eq-naira {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 22px;
+  color: #fff;
+}
+
+.sec-eq-num {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 22px;
+  color: #fff;
+}
+
+.sec-eq-dot {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 22px;
+  color: rgba(255,255,255,0.5);
+}
+
+.sec-eq-dec {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 22px;
+  color: rgba(255,255,255,0.5);
+}
+
+.sec-eq-gain-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 8px;
+}
+
+.sec-eq-pct {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  color: #28db0b;
+}
+
+/* Portfolio rows */
+.sec-portfolio-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.sec-port-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  height: 83px;
+  border-radius: 25px;
+  backdrop-filter: blur(2px);
+  background: linear-gradient(180deg, rgba(196,196,196,0.07) 0%, rgba(255,255,255,0.02) 100%);
+  border: 0.5px solid rgba(255,255,255,0.1);
+  box-sizing: border-box;
+}
+
+.sec-port-row.clickable { cursor: pointer; }
+
+.sec-port-flag {
+  width: 44px;
+  height: 44px;
+  border-radius: 35px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.sec-port-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.sec-port-name {
+  font-size: 12px;
+  color: #c9c9c9;
+  line-height: 1.28;
+}
+
+.sec-port-val {
+  font-weight: 700;
+  font-size: 16px;
+  color: #fff;
+  line-height: 1.28;
+}
+
+.sec-port-row.primary {
+  border: 1.5px solid rgba(255,255,255,0.5);
+}
+
+/* ── PERFORMANCE TAB ── */
+
+/* LP Collab / Sole Risk toggle — Figma: x=19, y=329, w=393, h=40 */
+.perf-collab-toggle {
+  display: flex;
+  align-items: center;
+  border: 1px solid #22282c;
+  border-radius: 25px;
+  height: 40px;
+  margin-bottom: 27px; /* gap to stats row: 401-329-40=32, minus divider ~5 */
+  overflow: hidden;
+}
+
+.perf-collab-btn {
+  flex: 1;
+  background: none;
+  border: none;
+  font-family: 'Anek Odia', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #455a64;
+  cursor: pointer;
+  height: 100%;
+  line-height: 1.29;
+}
+
+.perf-collab-btn.active {
+  background: #0a36a6;
+  backdrop-filter: blur(5px);
+  border-radius: 20px;
+  color: #fff;
+  margin: 4px;
+  height: 32px;
+}
+
+/* Stats row — Figma x positions: Plans=28, Today's=129, Total=243, Capital=340 on 430px frame */
+.perf-stats-row {
+  display: grid;
+  grid-template-columns: 101px 114px 97px 1fr;
+  gap: 0;
+  margin-bottom: 34px;
+  padding: 0 12px;
+}
+
+.perf-stat { display: flex; flex-direction: column; gap: 4px; }
+
+.perf-stat-label {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 9px;
+  color: #c6c6c6;
+  line-height: 1.305;
+}
+
+.perf-stat-value {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 10px;
+  color: #fff;
+  line-height: 1.305;
+}
+
+.perf-positive { color: #23d223; }
+.perf-negative { color: #cc2727; }
+
+/* Chart — Figma: x=21, y=476, w=386, h=264 */
+.perf-chart-wrap {
+  width: calc(100% + 0px);
+  border-radius: 0;
+  overflow: hidden;
+  margin-bottom: 0; /* time filters sit right below at y=760, chart bottom=740 → gap=20 */
+}
+
+.perf-chart-img { width: 100%; height: auto; display: block; }
+
+/* Time filters row — Figma: y=760, active pill (1M) at x=125, h=29 */
+.perf-time-filters {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px; /* gap to "Portfolio Top-Ups": 832-760-29=43 */
+  padding: 0 4px;
+}
+
+.perf-time-filters-sm {
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.perf-time-btn {
+  background: none;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 8px;
+  color: #fff;
+  cursor: pointer;
+  padding: 8px 9px;
+  border-radius: 3px;
+  line-height: 1.505;
+  white-space: nowrap;
+}
+.perf-time-btn.active {
+  background: #1d272b;
+  border-radius: 3px;
+  padding: 8px 9px;
+}
+
+/* Section titles — "Portfolio Top-Ups" y=832, h=17 */
+.perf-section-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 11px;
+  color: #bcbbbb;
+  margin: 0 0 8px; /* note text at y=859, title bottom=849 → gap=10 */
+  line-height: 1.505;
+  padding-left: 18px; /* Figma x=34, screen padding=16 → 34-16=18 */
+}
+
+/* Note text — y=859, h=12 */
+.perf-section-note {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 9px;
+  color: #455a64;
+  margin: 0 0 24px; /* bars start at y=921, note bottom=871 → gap=50, minus bar chart top padding */
+  line-height: 1.29;
+  padding-left: 18px;
+}
+
+/* Bar charts — total chart area height=140px (tallest bar), x labels at +10px below */
+.perf-bar-chart {
+  display: flex;
+  gap: 0;
+  margin-bottom: 0;
+  padding-left: 18px; /* y-axis starts at x=34 */
+}
+
+/* Y-axis — labels at x=34, spaced from y=917 to y=1054 = 137px */
+.perf-bar-y-axis {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-shrink: 0;
+  width: 33px;
+  height: 140px;
+  margin-bottom: 20px; /* space for x labels */
+}
+
+.perf-y-label {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 6px;
+  color: #a6a6a6;
+  line-height: 1.505;
+  white-space: nowrap;
+}
+
+/* Bars grid — bars start at x=67, width to x=391 = 324px */
+.perf-bars-grid {
+  flex: 1;
+  position: relative;
+  height: 160px; /* 140px bars + 20px for x labels */
+}
+
+.perf-bars-grid-company {
+  height: 142px; /* 114px bars + 28px for diagonal labels */
+}
+
+.perf-grid-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgba(255,255,255,0.08);
+}
+
+/* Bars sit at bottom of 140px area, x labels below */
+.perf-bars-row {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 140px;
+}
+
+/* Company bars — 5 bars, gap ~30px between, bars 11px wide */
+.perf-bars-row-company {
+  bottom: 28px;
+  height: 114px;
+  gap: 30px;
+  padding-left: 6px;
+}
+
+.perf-bar-col {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.perf-bar-col-company { flex: none; }
+
+.perf-bar { width: 100%; border-radius: 2px 2px 0 0; flex-shrink: 0; }
+.perf-bar-thin { width: 11px !important; }
+
+/* X labels — Figma y=1071, below bar bottom (y=1061) → 10px gap */
+.perf-x-label {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 6px;
+  color: #a6a6a6;
+  white-space: nowrap;
+  text-align: center;
+  position: absolute;
+  bottom: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Diagonal labels for company chart */
+.perf-x-label-diag {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 6px;
+  color: #a6a6a6;
+  white-space: nowrap;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  margin-top: 6px;
+  display: block;
+}
+
+/* Dividends line chart — Figma: x=62, y=1575, w=328, h=169 */
+.perf-div-chart {
+  display: flex;
+  gap: 0;
+  margin-bottom: 4px;
+  padding-left: 18px;
+}
+
+/* Y-axis labels: 0 at y=1749, 11000 at y=1575 → height=174px */
+.perf-div-y-axis {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-shrink: 0;
+  width: 33px;
+  height: 169px;
+}
+
+.perf-div-area {
+  flex: 1;
+  position: relative;
+  height: 169px;
+  border-left: 1px solid #2c3140;
+  border-bottom: 1px solid #2c3140;
+}
+
+.perf-div-svg { width: 100%; height: 100%; display: block; }
+
+/* X labels rotated -45° — Figma y=1744 */
+.perf-div-x-labels {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0 0 0;
+}
+
+/* Footer row: time filters left, "Total dividends" right — Figma y=1792/1802 */
+.perf-div-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 48px;
+  margin-bottom: 40px;
+  padding-left: 14px;
+}
+
+.perf-div-total {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 8px;
+  color: #bcbbbb;
+  white-space: nowrap;
+  margin-left: 16px;
+}
+
+/* Summary box — Figma: x=21, y=2120 (content), w=385, h=162 */
+.perf-summary-box {
+  backdrop-filter: blur(2px);
+  border: 0.5px solid rgba(255,255,255,0.1);
+  border-radius: 25px;
+  padding: 24px 20px 24px 20px;
+  margin-bottom: 24px;
+  position: relative;
+  min-height: 162px;
+}
+
+/* "All time" — Figma x=335, y=2149 → right:20px, top:24px */
+.perf-summary-period {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 8px;
+  color: #646363;
+  position: absolute;
+  top: 24px;
+  right: 20px;
+  margin: 0;
+  line-height: 1.29;
+}
+
+/* "Total invested in Strategies" — Figma y=2176, x=57 */
+.perf-summary-label {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 10px;
+  color: #bcbbbb;
+  margin: 0 0 4px;
+  line-height: 1.29;
+}
+
+/* "₦5,115,953.17" — Figma y=2193, font-size=14 */
+.perf-summary-value {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #fff;
+  margin: 0 0 14px;
+  line-height: 1.29;
+}
+
+/* Pill — Figma: x=55, y=2222, w=122, h=20 */
+.perf-summary-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(69,90,100,0.35);
+  border-radius: 10px;
+  padding: 5px 10px;
+  height: 20px;
+}
+
+.perf-summary-pill-text {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 8px;
+  color: #bcbbbb;
+  line-height: 1.29;
+}
+
+.perf-divco-wrap {
+  width: 100%;
+  margin-bottom: 4px;
+  overflow: visible;
+}
+
+.perf-divco-svg {
+  display: block;
+  overflow: visible;
+}

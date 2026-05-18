@@ -1,0 +1,91 @@
+.cc-screen {
+  width: 100%;
+  min-height: 100vh;
+  background: #000;
+  font-family: 'Anek Odia', sans-serif;
+  color: #fff;
+  padding: 40px 20px 60px;
+  max-width: 430px;
+  margin: 0 auto;
+}
+
+.cc-header {
+  display: flex; align-items: center; position: relative;
+}
+.cc-header .back-btn {
+  position: absolute; left: 0; background: none; border: none; cursor: pointer; padding: 8px;
+}
+.cc-title {
+  font-weight: 600; font-size: 29px; line-height: 1.285; width: 100%; text-align: center;
+}
+
+/* Tabs */
+.cc-tabs {
+  display: flex;
+  margin-top: 28px;
+  border-bottom: 1px solid #2c3140;
+}
+
+.cc-tab {
+  background: none;
+  border: none;
+  font-family: 'Anek Odia', sans-serif;
+  font-weight: 600;
+  font-size: 10px;
+  color: #455a64;
+  cursor: pointer;
+  padding: 8px 0;
+  width: 50%;
+  text-align: center;
+  position: relative;
+}
+
+.cc-tab.active {
+  color: #fff;
+}
+
+.cc-tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+}
+
+/* Empty state */
+.cc-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
+  gap: 24px;
+}
+
+.cc-empty-msg {
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+}
+
+.cc-blue-btn {
+  background: #2254d4;
+  border: none;
+  border-radius: 15px;
+  color: #fff;
+  font-family: 'Anek Odia', sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  padding: 10px 20px;
+  cursor: pointer;
+  min-width: 103px;
+}
+
+@media (min-width: 768px) {
+  .cc-screen { max-width: 100%; padding: 40px 64px 60px; }
+  .cc-tab { font-size: 16px; padding: 12px 0; }
+  .cc-empty-msg { font-size: 20px; }
+  .cc-blue-btn { font-size: 18px; padding: 14px 32px; min-width: 160px; border-radius: 20px; }
+}

@@ -1,0 +1,368 @@
+.minerva-screen {
+  background: #000;
+  min-height: 100vh;
+  max-width: 430px;
+  margin: 0 auto;
+  font-family: 'Anek Odia', sans-serif;
+  color: #fff;
+  padding-bottom: 40px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.minerva-screen::-webkit-scrollbar { display: none; }
+
+.minerva-hero {
+  position: relative;
+  width: 100%;
+  height: 430px;
+  overflow: hidden;
+}
+.minerva-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.minerva-header {
+  position: absolute;
+  top: 28px;
+  left: 26px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  z-index: 1;
+}
+.minerva-back {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+.minerva-back svg {
+  width: 10px;
+  height: 11px;
+}
+.minerva-page-title {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.29;
+  color: #00007e;
+  margin: 0;
+}
+.minerva-stat {
+  position: absolute;
+  bottom: 100px;
+  left: 20px;
+}
+.minerva-pct {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 100;
+  font-size: 64px;
+  line-height: 1.505;
+  color: #fff;
+}
+.minerva-pct-label {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 8px;
+  color: #fff;
+  text-align: center;
+  display: block;
+  margin-left: 50px;
+}
+
+/* Tabs */
+.minerva-tabs {
+  display: flex;
+  align-items: center;
+  padding: 16px 27px 0;
+}
+.minerva-tab {
+  font-family: 'Anek Odia', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.29;
+  color: #bcbbbb;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.minerva-tab.light {
+  font-weight: 300;
+}
+.minerva-tab-spacer { flex: 1; }
+.minerva-tab-line {
+  width: 100%;
+  height: 1px;
+  background: #333;
+}
+.minerva-tab-line-active {
+  width: 215px;
+  height: 2px;
+  background: #fff;
+}
+.minerva-lines-wrap {
+  padding: 8px 27px 0;
+}
+
+/* Body */
+.minerva-body {
+  padding: 24px 27px 0;
+  font-family: 'Anek Odia', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.29;
+  color: #bcbbbb;
+}
+.minerva-body p {
+  margin: 0 0 16px;
+}
+.minerva-body ul {
+  margin: 0 0 16px;
+  padding-left: 20px;
+}
+.minerva-body li {
+  margin-bottom: 6px;
+}
+.minerva-body .link {
+  color: #2254d4;
+  text-decoration: none;
+}
+
+/* Stats box */
+.minerva-stats-box {
+  margin: 32px 14px 0;
+  background: #040709;
+  border: 1px solid #2c3140;
+  border-radius: 30px;
+  padding: 24px 20px;
+  display: flex;
+  position: relative;
+  min-height: 180px;
+}
+.minerva-stats-left,
+.minerva-stats-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.minerva-stats-divider {
+  width: 1px;
+  background: #2c3140;
+  margin: 0 16px;
+  align-self: stretch;
+}
+.minerva-stat-item {
+  display: flex;
+  flex-direction: column;
+}
+.minerva-stat-num {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 22px;
+  color: #fff;
+}
+.minerva-stat-desc {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 22px;
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .minerva-screen { max-width: 100%; }
+  .minerva-hero { height: 500px; max-width: 800px; margin: 0 auto; }
+  .minerva-header { top: 40px; left: 48px; }
+  .minerva-page-title { font-size: 40px; }
+  .minerva-stat { bottom: 120px; left: 48px; }
+  .minerva-pct { font-size: 80px; }
+  .minerva-pct-label { font-size: 14px; }
+  .minerva-tabs { max-width: 800px; margin: 0 auto; padding: 24px 0 0; }
+  .minerva-tab { font-size: 22px; }
+  .minerva-tab-line-active { max-width: 800px; }
+  .minerva-tab-line { max-width: 800px; }
+  .minerva-lines-wrap { max-width: 800px; margin: 0 auto; padding: 8px 0 0; }
+  .minerva-body { max-width: 800px; margin: 0 auto; padding: 32px 0 0; font-size: 17px; line-height: 1.6; }
+  .minerva-stats-box { max-width: 800px; margin: 40px auto 0; padding: 32px 28px; }
+  .minerva-stat-num { font-size: 16px; }
+  .minerva-stat-desc { font-size: 13px; }
+}
+
+/* Invest tab */
+.minerva-invest {
+  padding: 24px 27px 0;
+}
+.minerva-invest-title {
+  font-family: 'Anek Odia', sans-serif;
+  font-weight: 600;
+  font-size: 29px;
+  line-height: 1.285;
+  color: #fff;
+  margin: 0 0 24px;
+}
+.minerva-invest-label {
+  font-family: 'Anek Odia', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.29;
+  color: #fff;
+  margin: 0 0 16px;
+}
+.minerva-tenor-box {
+  border: 1px solid #455a64;
+  border-radius: 20px;
+  padding: 20px;
+}
+.minerva-tenor-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.minerva-tenor-val {
+  font-family: 'Anek Odia', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #fff;
+  display: block;
+}
+.minerva-tenor-sub {
+  font-family: 'Anek Odia', sans-serif;
+  font-weight: 500;
+  font-size: 10px;
+  color: #455a64;
+  display: block;
+  margin-top: 2px;
+}
+.minerva-tenor-check {
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.minerva-tenor-note {
+  font-family: 'Anek Odia', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.29;
+  color: #fff;
+  margin: 16px 0 0;
+}
+.minerva-tenor-note .blue { color: #2f89fc; }
+.minerva-tenor-default {
+  font-family: 'Anek Odia', sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  color: #455a64;
+  display: block;
+  margin-top: 8px;
+}
+.minerva-invest-warning {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.29;
+  color: #cc2727;
+  margin: 280px 0 0;
+  text-align: center;
+}
+.minerva-invest-confirm {
+  width: 360px;
+  max-width: 100%;
+  height: 72px;
+  background: #646363;
+  border: none;
+  border-radius: 25px;
+  font-family: 'Anek Odia', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 22px;
+  color: #bcbbbb;
+  cursor: pointer;
+  margin-top: 32px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.minerva-invest-confirm.active {
+  background: #2254d4;
+  color: #fff;
+}
+
+/* Minerva Invest Amount page */
+.mi-input-wrap {
+  display: flex;
+  align-items: center;
+  border: 0.5px solid #646363;
+  border-radius: 7px;
+  height: 48px;
+  padding: 0 16px;
+  margin-top: 8px;
+}
+.mi-currency {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: #fff;
+  margin-right: 8px;
+}
+.mi-input {
+  flex: 1;
+  background: none;
+  border: none;
+  outline: none;
+  font-family: 'Anek Odia', sans-serif;
+  font-size: 18px;
+  color: #fff;
+}
+.mi-limits {
+  font-family: 'Anek Odia', sans-serif;
+  font-size: 10px;
+  color: #455a64;
+  margin: 12px 0 0;
+}
+.mi-limits-light { font-weight: 500; }
+.mi-limits-bold { font-weight: 700; }
+.mi-balance {
+  font-family: 'Anek Odia', sans-serif;
+  font-weight: 600;
+  font-size: 10px;
+  color: #2254d4;
+  margin: 4px 0 0;
+}
+.mi-balance-bold { font-weight: 700; }
+
+/* Fee breakdown */
+.mi-fees-box {
+  border: 1px solid #2c3140;
+  border-radius: 16px;
+  padding: 16px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.mi-fee-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.mi-fee-label {
+  font-family: 'Anek Odia', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #bcbbbb;
+}
+.mi-fee-val {
+  font-family: 'Anek Odia', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #bcbbbb;
+  text-align: right;
+}
+.mi-fee-val.dim { color: #bcbbbb; }
+.mi-fee-val.big { font-size: 17px; font-weight: 600; color: #fff; }
+.mi-fee-row.total { border-top: 1px solid #2c3140; padding-top: 12px; }

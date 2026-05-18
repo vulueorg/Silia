@@ -1,0 +1,370 @@
+.markets-screen {
+  width: 100%;
+  min-height: 100vh;
+  background: #000;
+  font-family: 'Anek Odia', sans-serif;
+  color: #fff;
+  padding: 0 16px 100px;
+  max-width: 440px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Header */
+.markets-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 45px;
+  margin-bottom: 16px;
+}
+
+.markets-title {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 27px;
+  margin: 0;
+}
+
+.markets-dropdown-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.markets-dropdown-btn:hover {
+  transform: scale(1.1);
+}
+
+.markets-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #0d1117;
+  border: 1px solid #22282c;
+  border-radius: 8px;
+  padding: 8px 0;
+  min-width: 120px;
+  z-index: 100;
+  animation: dropdownSlide 0.2s ease-out;
+}
+
+@keyframes dropdownSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.markets-dropdown-item {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 12px 16px;
+  font-family: 'Anek Odia', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.2s ease;
+}
+
+.markets-dropdown-item:hover {
+  background: #1a1f24;
+}
+
+.markets-subtitle {
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 1.29;
+  color: #ebf0ff;
+  margin: 0 0 20px;
+  max-width: 190px;
+}
+
+/* Tab bar */
+.markets-tab-bar {
+  position: relative;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  background: #0d1117;
+  border: 1px solid #22282c;
+  border-radius: 25px;
+  padding: 0 4px;
+}
+
+.markets-tab {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  background: none;
+  border: none;
+  font-family: 'Anek Odia', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #455a64;
+  cursor: pointer;
+  height: 36px;
+  line-height: 1.29;
+  border-radius: 20px;
+}
+
+.markets-tab.active {
+  background: #0a36a6;
+  backdrop-filter: blur(5px);
+  color: #fff;
+  margin: 0 4px;
+}
+
+/* Cards */
+.markets-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mkt-card {
+  position: relative;
+  width: 331px;
+  height: 462px;
+  margin: 0 auto 0;
+  overflow: hidden;
+  border-radius: 0;
+}
+
+.mkt-card-light {
+  background: #fff;
+}
+
+.mkt-card-frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  pointer-events: none;
+}
+
+.mkt-card-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 371px;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.mkt-card-content {
+  position: absolute;
+  inset: 0;
+  padding: 28px 13px 16px 13px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Card name */
+.mkt-card-name {
+  font-family: 'Anek Odia', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.29;
+  color: #fff;
+  margin: 0 0 4px;
+}
+
+.mkt-card-name-blue {
+  color: #003399;
+}
+
+.mkt-card-name-sub {
+  font-family: 'Anek Odia', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.29;
+  color: #003399;
+  margin: 0;
+}
+
+/* Stanbic header row */
+.mkt-card-stanbic-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.mkt-card-stanbic-img {
+  width: 153px;
+  height: 153px;
+  object-fit: cover;
+}
+
+/* Stat */
+.mkt-card-stat {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.mkt-card-pct {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 100;
+  font-size: 64px;
+  line-height: 1.505;
+  color: #fff;
+}
+
+.mkt-card-pct-blue {
+  color: #003399;
+}
+
+.mkt-card-period {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.29;
+  color: #fff;
+}
+
+.mkt-card-period-blue {
+  font-size: 8px;
+  color: #003399;
+}
+
+/* Link */
+.mkt-card-link {
+  background: none;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.28;
+  color: #fff;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 10px 20px;
+  text-align: left;
+  align-self: flex-end;
+  margin-bottom: 4px;
+}
+
+.mkt-card-link-blue {
+  color: #003399;
+}
+
+/* Description */
+.mkt-card-desc {
+  font-family: 'Anek Odia', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.29;
+  color: #bcbbbb;
+  margin: 0;
+}
+
+.mkt-card:not(.mkt-card-light) .mkt-card-desc {
+  margin-top: 10px;
+  margin-bottom: -10px;
+}
+
+.mkt-card-light .mkt-card-desc {
+  background: #000;
+  padding: 8px;
+  margin: 0 -13px -16px -13px;
+  border: 1px solid #fff;
+}
+
+/* Empty state */
+.markets-empty {
+  text-align: center;
+  color: #455a64;
+  font-size: 13px;
+  margin-top: 60px;
+}
+
+/* Disclaimer */
+.markets-disclaimer {
+  margin-top: 24px;
+  border-radius: 12px;
+  padding: 26px 24px;
+  background: rgba(255,255,255,0.02);
+  border: 0.5px solid rgba(255,255,255,0.06);
+}
+
+.markets-disclaimer p {
+  font-family: 'Anek Odia', sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 1.29;
+  color: #455a64;
+  margin: 0;
+}
+
+.markets-disclaimer strong {
+  color: #455a64;
+}
+
+.markets-disclaimer-link {
+  color: #455a64;
+  text-decoration: none;
+}
+
+/* Sub-nav */
+.markets-subnav {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  margin-bottom: 24px;
+  gap: 0;
+  position: relative;
+}
+
+.markets-subnav-btn {
+  flex: 1;
+  background: #020714;
+  border: none;
+  border-radius: 25px;
+  font-family: 'Anek Odia', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: #fff;
+  cursor: pointer;
+  height: 36px;
+  line-height: 1.29;
+  padding: 0 8px;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.markets-subnav-btn.active {
+  background: #2254d4;
+  border-radius: 25px;
+}
+
+.markets-subnav-icon {
+  width: 27px;
+  height: 27px;
+  flex-shrink: 0;
+}
+
+.mkt-card-desc strong {
+  font-weight: 700;
+  color: #bcbbbb;
+}

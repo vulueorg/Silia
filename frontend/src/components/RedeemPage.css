@@ -1,0 +1,195 @@
+.redeem-screen {
+  width: 100%;
+  min-height: 100vh;
+  background: #000;
+  font-family: 'Anek Odia', sans-serif;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.redeem-right-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 14px 60px;
+  max-width: 430px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.redeem-header {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.redeem-header .back-btn {
+  position: absolute; left: 0; top: -20px;
+  background: none; border: none; cursor: pointer; padding: 8px;
+}
+.redeem-title {
+  font-weight: 600; font-size: 29px; line-height: 1.285;
+  width: 100%; text-align: center;
+}
+
+/* Tabs */
+.redeem-tabs {
+  margin-top: 28px;
+  display: flex;
+  background: #1a1a2e;
+  border-radius: 20px;
+  padding: 4px;
+  gap: 4px;
+}
+
+.rtab {
+  flex: 1;
+  height: 36px;
+  background: none;
+  border: none;
+  border-radius: 15px;
+  font-family: 'Anek Odia', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #10171a;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.rtab.active {
+  background: rgba(34, 84, 212, 0.3);
+  color: #fff;
+  backdrop-filter: blur(5px);
+}
+
+/* Investment card */
+.invest-card {
+  margin-top: 24px;
+  border: 1px solid #161a21;
+  border-radius: 30px;
+  overflow: hidden;
+  display: flex;
+  background: linear-gradient(90deg, #000 46%, rgba(0,0,0,0.9) 60.6%, rgba(0,0,0,0.8) 75.4%, rgba(0,0,0,0.7) 87.9%, rgba(0,0,0,0.4) 100%);
+  min-height: 151px;
+  transition: border-color 0.2s;
+}
+
+.invest-card.selected {
+  border-color: #2254d4;
+}
+
+.invest-img {
+  width: 151px;
+  height: 151px;
+  object-fit: cover;
+  border-radius: 30px 0 0 30px;
+  flex-shrink: 0;
+}
+
+.invest-content {
+  flex: 1;
+  padding: 16px 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.invest-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.invest-name {
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.invest-chevron { opacity: 0.6; }
+
+.invest-amount {
+  font-weight: 600;
+  font-size: 14px;
+  margin-top: 12px;
+}
+
+.invest-maturity {
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  margin-top: auto;
+}
+.invest-maturity .green { color: #05a54f; }
+.invest-maturity .bold { font-weight: 700; }
+
+/* Redeem info */
+.redeem-info {
+  margin-top: 16px;
+  padding: 16px 20px;
+  border: 1px solid #2c3140;
+  border-radius: 15px;
+}
+
+.redeem-info-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.redeem-info-amount {
+  font-weight: 500;
+  font-size: 28px;
+  color: #fff;
+  margin-top: 8px;
+}
+
+.empty-tab {
+  margin-top: 60px;
+  text-align: center;
+  color: #455a64;
+  font-size: 13px;
+}
+
+.redeem-confirm {
+  margin-top: auto;
+  width: 100%;
+  height: 72px;
+  background: #646363;
+  border: none;
+  border-radius: 25px;
+  color: #bcbbbb;
+  font-family: 'Anek Odia', sans-serif;
+  font-size: 20px;
+  cursor: pointer;
+  margin-top: 40px;
+  transition: background 0.2s;
+}
+
+.redeem-confirm.active {
+  background: #1410b1;
+}
+
+.redeem-brand {
+  display: flex; align-items: center; justify-content: center;
+  gap: 8px; margin-top: 40px;
+}
+.redeem-brand .brand-icon { width: 36px; height: 36px; object-fit: cover; }
+.redeem-brand .brand-text { font-weight: 200; font-size: 20px; }
+
+@media (min-width: 768px) {
+  .redeem-screen { flex-direction: row; }
+  .redeem-right-panel {
+    width: 50%;
+    max-width: none;
+    margin: 0;
+    margin-left: 50%;
+    padding: 60px 64px;
+    justify-content: center;
+  }
+  .redeem-header .back-btn { position: relative; left: auto; margin-right: 16px; }
+  .redeem-header { justify-content: flex-start; }
+  .redeem-title { text-align: left; font-size: 36px; }
+  .redeem-header .back-btn-mobile { display: none; }
+  .invest-card { max-width: 603px; }
+  .redeem-confirm { max-width: 603px; }
+  .rtab { font-size: 18px; height: 44px; }
+}

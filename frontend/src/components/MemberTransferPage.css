@@ -1,0 +1,91 @@
+.mt-screen {
+  width: 100%;
+  min-height: 100vh;
+  background: #000;
+  font-family: 'Anek Odia', sans-serif;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.mt-right-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 20px 60px;
+  max-width: 430px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.mt-header {
+  display: flex; align-items: center; position: relative;
+}
+.mt-header .back-btn {
+  position: absolute; left: 0; background: none; border: none; cursor: pointer; padding: 8px;
+}
+.mt-title {
+  font-weight: 600; font-size: 29px; line-height: 1.285; width: 100%; text-align: center;
+}
+
+.mt-field {
+  margin-top: 24px;
+  display: flex; align-items: center;
+  border: 0.5px solid #646363; border-radius: 7px; height: 48px; padding: 0 16px;
+  transition: border-color 0.2s;
+}
+.mt-field:first-of-type { margin-top: 40px; }
+.mt-field.has-value { border-color: #2254d4; }
+
+.mt-naira { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 20px; }
+.mt-divider { width: 1px; height: 27px; background: rgba(255,255,255,0.3); margin: 0 12px; }
+
+.mt-input {
+  flex: 1; background: none; border: none; outline: none;
+  color: #bcbbbb; font-family: 'Anek Odia', sans-serif; font-size: 16px; height: 100%;
+}
+.mt-input::placeholder { color: #bcbbbb; }
+.mt-field.has-value .mt-input { color: #fff; }
+
+.mt-hint { margin-top: 8px; font-size: 10px; color: #455a64; }
+.mt-hint .hint-light { font-weight: 500; }
+.mt-hint .hint-bold { font-weight: 700; }
+
+.mt-warning {
+  margin-top: 24px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  color: #cc2727;
+  line-height: 1.29;
+}
+
+.mt-confirm {
+  margin-top: auto; width: 100%; height: 72px; background: #646363;
+  border: none; border-radius: 25px; color: #bcbbbb;
+  font-family: 'Anek Odia', sans-serif; font-size: 20px; cursor: pointer;
+  margin-top: 40px; transition: background 0.2s;
+}
+.mt-confirm.active { background: #1410b1; }
+
+.mt-brand {
+  display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 40px;
+}
+.mt-brand .brand-icon { width: 36px; height: 36px; object-fit: cover; }
+.mt-brand .brand-text { font-weight: 200; font-size: 20px; }
+
+@media (min-width: 768px) {
+  .mt-screen { flex-direction: row; }
+  .mt-right-panel {
+    width: 50%;
+    max-width: none;
+    margin: 0;
+    margin-left: 50%;
+    padding: 60px 64px;
+    justify-content: center;
+  }
+  .mt-header .back-btn { position: relative; left: auto; margin-right: 16px; }
+  .mt-header { justify-content: flex-start; }
+  .mt-title { text-align: left; font-size: 36px; }
+  .mt-header .back-btn-mobile { display: none; }
+  .mt-confirm { max-width: 603px; }
+}

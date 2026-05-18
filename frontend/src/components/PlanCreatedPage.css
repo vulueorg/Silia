@@ -1,0 +1,89 @@
+.pc-screen {
+  width: 100%;
+  min-height: 100vh;
+  background: #000;
+  font-family: 'Anek Odia', sans-serif;
+  color: #fff;
+  padding: 40px 20px 60px;
+  max-width: 430px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.pc-header {
+  display: flex; align-items: flex-start; position: relative; gap: 12px;
+}
+.pc-header .back-btn {
+  position: absolute; left: 0; top: 8px; background: none; border: none; cursor: pointer; padding: 8px;
+}
+.pc-title {
+  font-weight: 400; font-size: 24px; line-height: 27px;
+  margin-left: 40px; width: 221px;
+}
+
+/* Collab row */
+.pc-collab-row {
+  margin-top: 40px;
+  display: flex; align-items: center; gap: 12px;
+}
+.pc-group-icon { width: 24px; height: 24px; }
+.pc-collab-info { flex: 1; display: flex; flex-direction: column; }
+.pc-collab-name {
+  font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 20px;
+}
+.pc-collab-desc {
+  font-family: 'Poppins', sans-serif; font-weight: 300; font-size: 10px;
+}
+.pc-wallet-badge {
+  font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 13px;
+  border: 1px solid #9ab6fe; border-radius: 7px;
+  padding: 8px 12px;
+}
+
+/* Details */
+.pc-detail-row {
+  margin-top: 24px;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.pc-detail-label {
+  font-family: 'Inter', sans-serif; font-weight: 400; font-size: 16px;
+}
+.pc-detail-value {
+  font-family: 'Inter', sans-serif; font-weight: 900; font-size: 16px;
+}
+
+.pc-order-id {
+  margin-top: 4px;
+  font-weight: 500; font-size: 6px; color: #bcbbbb; line-height: 1.28;
+}
+
+/* Amount input */
+.pc-amount-field {
+  margin-top: 24px;
+  display: flex; align-items: center;
+  border: 0.5px solid #646363; border-radius: 7px; height: 48px; padding: 0 16px;
+  transition: border-color 0.2s;
+}
+.pc-amount-field.has-value { border-color: #2254d4; }
+.pc-naira { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 20px; }
+.pc-divider { width: 1px; height: 27px; background: rgba(255,255,255,0.3); margin: 0 12px; }
+.pc-input {
+  flex: 1; background: none; border: none; outline: none;
+  color: #fff; font-family: 'Anek Odia', sans-serif; font-size: 16px; height: 100%;
+}
+.pc-input::placeholder { color: #bcbbbb; }
+
+/* Confirm */
+.pc-confirm {
+  margin-top: auto; width: 100%; height: 72px; background: #646363;
+  border: none; border-radius: 25px; color: #bcbbbb;
+  font-family: 'Anek Odia', sans-serif; font-size: 20px;
+  cursor: pointer; margin-top: 40px; transition: background 0.2s;
+}
+.pc-confirm.active { background: #1410b1; }
+
+@media (min-width: 768px) {
+  .pc-screen { max-width: 100%; padding: 40px 64px 60px; }
+  .pc-confirm { max-width: 400px; align-self: center; }
+}

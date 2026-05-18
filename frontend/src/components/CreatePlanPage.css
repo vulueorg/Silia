@@ -1,0 +1,105 @@
+.cp-screen {
+  width: 100%;
+  min-height: 100vh;
+  background: #000;
+  font-family: 'Anek Odia', sans-serif;
+  color: #fff;
+  padding: 40px 20px 60px;
+  max-width: 430px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.cp-header {
+  display: flex; align-items: center; position: relative;
+}
+.cp-header .back-btn {
+  position: absolute; left: 0; background: none; border: none; cursor: pointer; padding: 8px;
+}
+.cp-title {
+  font-weight: 600; font-size: 29px; line-height: 1.285; width: 100%; text-align: center;
+}
+
+.cp-field {
+  margin-top: 20px;
+  border-bottom: 1px solid #02174e;
+  border-radius: 5px;
+  height: 47px;
+  overflow: hidden;
+}
+.cp-field:first-of-type { margin-top: 32px; }
+
+.cp-field input {
+  width: 100%; height: 100%; background: none; border: none; outline: none;
+  color: #fff; font-family: 'Poppins', sans-serif; font-size: 13px;
+  padding: 0 15px;
+}
+.cp-field input::placeholder { color: #2254d4; }
+
+.cp-field.textarea {
+  height: 113px;
+  border: 1px solid #02174e;
+  border-radius: 5px;
+}
+.cp-field.textarea textarea {
+  width: 100%; height: 100%; background: none; border: none; outline: none;
+  color: #fff; font-family: 'Poppins', sans-serif; font-size: 13px;
+  padding: 14px 15px; resize: none;
+}
+.cp-field.textarea textarea::placeholder { color: #2254d4; }
+
+.cp-hint {
+  margin-top: 6px;
+  font-weight: 500; font-size: 10px; color: #213d4a; line-height: 1.29;
+}
+
+.cp-label {
+  margin-top: 20px;
+  font-size: 13px; color: #2254d4;
+}
+
+.cp-radios {
+  display: flex; gap: 24px; margin-top: 10px;
+}
+
+.cp-radio {
+  display: flex; align-items: center; gap: 8px;
+  font-weight: 500; font-size: 12px; color: #fff; cursor: pointer;
+}
+.cp-radio input { display: none; }
+
+.cp-radio-dot {
+  width: 15px; height: 15px; border-radius: 50%;
+  border: 2px solid #455a64; position: relative;
+}
+.cp-radio input:checked + .cp-radio-dot {
+  border-color: #2254d4;
+}
+.cp-radio input:checked + .cp-radio-dot::after {
+  content: '';
+  position: absolute; top: 3px; left: 3px;
+  width: 7px; height: 7px; border-radius: 50%;
+  background: #2254d4;
+}
+
+.cp-strategies-msg {
+  margin-top: 24px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #2254d4;
+  text-align: center;
+}
+
+.cp-confirm {
+  margin-top: auto;
+  width: 360px; height: 72px;
+  background: #1410b1; border: 1px solid #2254d4;
+  border-radius: 25px; color: #bcbbbb;
+  font-family: 'Anek Odia', sans-serif; font-size: 20px;
+  cursor: pointer; align-self: center; margin-top: 40px;
+}
+
+@media (min-width: 768px) {
+  .cp-screen { max-width: 100%; padding: 40px 64px 60px; }
+}

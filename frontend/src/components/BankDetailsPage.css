@@ -1,0 +1,209 @@
+.bd-screen {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #000d2e 0%, #000 41%);
+  font-family: 'Anek Odia', sans-serif;
+  color: #fff;
+  padding: 40px 20px 60px;
+  max-width: 430px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.bd-gradient {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 126px;
+  background: linear-gradient(187deg, rgba(21,118,121,0) 48%, rgba(47,105,255,0.2) 85%);
+  transform: rotate(180deg);
+  pointer-events: none;
+}
+
+.bd-header { position: relative; z-index: 1; }
+.bd-header .back-btn {
+  background: none; border: none; cursor: pointer; padding: 8px;
+}
+
+.bd-title {
+  font-weight: 700; font-size: 20px; color: #f1f1f1;
+  text-align: center; margin-top: 40px;
+}
+
+/* Add bank pill */
+.bd-add-pill {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 332px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+  background: rgba(196,196,196,0.01);
+  border: none;
+  padding: 0 16px;
+  cursor: pointer;
+  color: #fff;
+  font-family: 'Anek Odia', sans-serif;
+  font-weight: 600;
+  font-size: 11px;
+  box-shadow: inset 0 -82px 10px -64px rgba(96,68,144,0.04),
+              inset 0 2px 2px rgba(154,146,210,0.02),
+              inset 0 1px 20px rgba(227,222,255,0.1);
+}
+
+.bd-plus { width: 27px; height: 27px; }
+
+.bd-saved-label {
+  margin-top: 28px;
+  font-weight: 500; font-size: 14px;
+  padding-left: 8px;
+}
+
+/* Add form */
+.bd-form {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 332px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bd-input {
+  height: 46px;
+  background: none;
+  border: 1px solid #2c3140;
+  border-radius: 8px;
+  color: #fff;
+  font-family: 'Anek Odia', sans-serif;
+  font-size: 13px;
+  padding: 0 14px;
+  outline: none;
+}
+.bd-input:focus { border-color: #2254d4; }
+.bd-input::placeholder { color: #455a64; }
+
+/* Bank selector */
+.bd-bank-select {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  text-align: left;
+}
+.bd-selected-bank {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.bd-placeholder { color: #455a64; }
+.bd-chevron { font-size: 10px; color: #455a64; }
+
+.bd-bank-thumb {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #fff;
+}
+
+.bd-bank-initial {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+/* Scrollable bank list */
+.bd-bank-list {
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #2c3140;
+  border-radius: 8px;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+}
+.bd-bank-list::-webkit-scrollbar { width: 4px; }
+.bd-bank-list::-webkit-scrollbar-thumb { background: #2c3140; border-radius: 2px; }
+
+.bd-bank-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #1a1a2e;
+  color: #fff;
+  font-family: 'Anek Odia', sans-serif;
+  font-size: 13px;
+  cursor: pointer;
+  text-align: left;
+}
+.bd-bank-option:hover { background: #1a1a2e; }
+.bd-bank-option.selected { background: #0a1a3a; }
+
+.bd-save {
+  height: 44px;
+  background: #646363;
+  border: none;
+  border-radius: 20px;
+  color: #bcbbbb;
+  font-family: 'Anek Odia', sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.bd-save.active { background: #1410b1; }
+
+/* Account card */
+.bd-account-card {
+  margin-top: 12px;
+  background: #030410;
+  border: 1.5px solid rgba(255,255,255,0.2);
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.bd-account-info { flex: 1; }
+.bd-account-name {
+  font-weight: 600; font-size: 15px; margin: 0 0 4px;
+}
+.bd-account-number {
+  font-weight: 600; font-size: 15px; color: #b4b4b4; margin: 0;
+}
+.bd-account-bank {
+  font-weight: 600; font-size: 15px; color: #b4b4b4; margin: 0;
+}
+.bd-bank-logo {
+  width: 30px; height: 30px; flex-shrink: 0;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .bd-screen { max-width: 100%; padding: 40px 64px 60px; }
+  .bd-title { font-size: 28px; }
+  .bd-add-pill { width: 500px; height: 58px; font-size: 14px; gap: 16px; border-radius: 24px; }
+  .bd-plus { width: 32px; height: 32px; }
+  .bd-saved-label { font-size: 18px; font-weight: 600; max-width: 500px; margin-left: auto; margin-right: auto; }
+  .bd-account-card { max-width: 500px; margin-left: auto; margin-right: auto; padding: 24px; border-radius: 14px; }
+  .bd-account-name { font-size: 18px; }
+  .bd-account-number { font-size: 16px; }
+  .bd-account-bank { font-size: 16px; }
+  .bd-bank-logo { width: 40px; height: 38px; }
+}
