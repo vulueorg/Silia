@@ -258,7 +258,7 @@ export default function AdminLayout() {
 
       {/* Main content */}
       <main className="admin-main">
-        <Outlet />
+        <Outlet key={location.pathname} />
       </main>
     </div>
   )
