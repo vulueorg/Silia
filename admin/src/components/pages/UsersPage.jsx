@@ -52,7 +52,7 @@ export default function UsersPage() {
             className="admin-search-input"
           />
         </div>
-        <div className="admin-tabs" style={{ overflowX: 'auto', flexWrap: 'nowrap' }}>
+        <div className="admin-tabs" style={{ overflowX: 'auto', flexWrap: 'nowrap', flexShrink: 0 }}>
           {tabs.map((t) => (
             <button
               key={t}

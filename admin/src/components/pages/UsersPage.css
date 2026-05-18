@@ -213,6 +213,7 @@
   .admin-page-header {
     flex-direction: column;
     align-items: stretch;
+    flex-wrap: nowrap;
   }
 
   .admin-page-header__search {
@@ -223,6 +224,7 @@
     overflow-x: auto;
     flex-wrap: nowrap;
     scrollbar-width: none;
+    width: 100%;
   }
 
   .admin-tabs::-webkit-scrollbar {

@@ -101,6 +101,22 @@
     gap: 16px;
   }
 
+  .admin-approvals__header {
+    overflow-x: auto;
+    scrollbar-width: none;
+    width: 100%;
+  }
+
+  .admin-approvals__header::-webkit-scrollbar {
+    display: none;
+  }
+
+  .admin-approvals__header .admin-tabs {
+    flex-wrap: nowrap;
+    min-width: max-content;
+    width: max-content;
+  }
+
   .admin-approvals__grid {
     grid-template-columns: 1fr;
   }

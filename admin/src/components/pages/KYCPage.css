@@ -46,15 +46,17 @@
   .admin-kyc__header {
     overflow-x: auto;
     scrollbar-width: none;
+    width: 100%;
   }
 
   .admin-kyc__header::-webkit-scrollbar {
     display: none;
   }
 
-  .admin-tabs {
+  .admin-kyc__header .admin-tabs {
     flex-wrap: nowrap;
     min-width: max-content;
+    width: max-content;
   }
 
   .admin-table-wrap {
